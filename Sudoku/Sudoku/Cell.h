@@ -14,11 +14,11 @@
 class Cell
 {
 protected:
-    std::size_t iValue_;
+    unsigned int iValue_;
     bool bIsEmpty_;
 public:
     Cell();
-    Cell(const std::size_t iValue);
+    Cell(const unsigned int iValue);
     virtual ~Cell();
 };
 

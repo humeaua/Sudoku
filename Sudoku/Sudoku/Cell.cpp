@@ -13,7 +13,7 @@
 Cell::Cell() : bIsEmpty_(true)
 {}
 
-Cell::Cell(const std::size_t iValue) : iValue_(iValue), bIsEmpty_(false)
+Cell::Cell(const unsigned int iValue) : iValue_(iValue), bIsEmpty_(false)
 {
     if (iValue == 0 || iValue > 9)
     {
