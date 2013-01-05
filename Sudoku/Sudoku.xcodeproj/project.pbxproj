@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F011D6316983A9D00A92D97 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F011D6216983A9D00A92D97 /* Grid.cpp */; };
 		4F5AA1D61696E82200DC0F1C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5AA1D51696E82200DC0F1C /* main.cpp */; };
 		4F5AA1D81696E82200DC0F1C /* Sudoku.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4F5AA1D71696E82200DC0F1C /* Sudoku.1 */; };
 		4F5AA1E01696E9DB00DC0F1C /* Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5AA1DF1696E9DB00DC0F1C /* Cell.cpp */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F011D60169839E200A92D97 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		4F011D6216983A9D00A92D97 /* Grid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Grid.cpp; sourceTree = "<group>"; };
 		4F5AA1D11696E82200DC0F1C /* Sudoku */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sudoku; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F5AA1D51696E82200DC0F1C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4F5AA1D71696E82200DC0F1C /* Sudoku.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Sudoku.1; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 				4F5AA1DF1696E9DB00DC0F1C /* Cell.cpp */,
 				4F5AA1E11696ED8500DC0F1C /* Region.h */,
 				4F5AA1E2169733CB00DC0F1C /* Region.cpp */,
+				4F011D60169839E200A92D97 /* Grid.h */,
+				4F011D6216983A9D00A92D97 /* Grid.cpp */,
 				4F5AA1D51696E82200DC0F1C /* main.cpp */,
 				4F5AA1D71696E82200DC0F1C /* Sudoku.1 */,
 			);
@@ -129,6 +134,7 @@
 				4F5AA1D61696E82200DC0F1C /* main.cpp in Sources */,
 				4F5AA1E01696E9DB00DC0F1C /* Cell.cpp in Sources */,
 				4F5AA1E3169733CB00DC0F1C /* Region.cpp in Sources */,
+				4F011D6316983A9D00A92D97 /* Grid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +221,7 @@
 				4F5AA1DD1696E82200DC0F1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
