@@ -18,7 +18,7 @@ int main (int argc, const char * argv[])
     {
         //Cell sCell0, sCell1(1), sCell2(10);
         Region sRegion("123456789");
-        int i = 0;
+        //int i = 0;
     } 
     catch (std::string & s) 
     {

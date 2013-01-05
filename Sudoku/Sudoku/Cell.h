@@ -23,9 +23,9 @@ public:
     
     virtual bool IsEmpty() const;
     
-    Cell & operator=(unsigned int iValue);
-    operator unsigned int() const;
-    bool operator==( unsigned int iValue) const;
+    virtual Cell & operator=(unsigned int iValue);
+    virtual operator unsigned int() const;
+    virtual bool operator==( unsigned int iValue) const;
 };
 
 #endif
