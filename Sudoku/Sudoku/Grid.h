@@ -10,7 +10,7 @@
 #define Sudoku_Grid_h
 
 #include <vector>
-#include "Region.h"
+#include "RegionHolder.h"
 
 class Grid {
 protected:
@@ -20,6 +20,16 @@ public:
     virtual ~Grid();
     
     virtual bool IsFull() const;
+    
+    virtual const RegionHolder GetNO() const;
+    virtual const RegionHolder GetNE() const;
+    virtual const RegionHolder GetN() const;
+    virtual const RegionHolder GetO() const;
+    virtual const RegionHolder GetC() const;
+    virtual const RegionHolder GetE() const;
+    virtual const RegionHolder GetS() const;
+    virtual const RegionHolder GetSE() const;
+    virtual const RegionHolder GetSO() const;
 };
 
 #endif

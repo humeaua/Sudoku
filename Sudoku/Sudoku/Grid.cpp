@@ -30,3 +30,48 @@ bool Grid::IsFull() const
 {
     return sRegionC_.IsFull() && sRegionE_.IsFull() && sRegionN_.IsFull() && sRegionNE_.IsFull() && sRegionNO_.IsFull() && sRegionO_.IsFull() && sRegionS_.IsFull() && sRegionSE_.IsFull() && sRegionSO_.IsFull();
 }
+
+const RegionHolder Grid::GetNO() const
+{
+    return RegionHolder(sRegionNO_);
+}
+
+const RegionHolder Grid::GetNE() const
+{
+    return RegionHolder(sRegionNE_);
+}
+
+const RegionHolder Grid::GetN() const
+{
+    return RegionHolder(sRegionN_);
+}
+
+const RegionHolder Grid::GetO() const
+{
+    return RegionHolder(sRegionO_);
+}
+
+const RegionHolder Grid::GetC() const
+{
+    return RegionHolder(sRegionC_);
+}
+
+const RegionHolder Grid::GetE() const
+{
+    return RegionHolder(sRegionE_);
+}
+
+const RegionHolder Grid::GetS() const
+{
+    return RegionHolder(sRegionS_);
+}
+
+const RegionHolder Grid::GetSE() const
+{
+    return RegionHolder(sRegionSE_);
+}
+
+const RegionHolder Grid::GetSO() const
+{
+    return RegionHolder(sRegionSO_);
+}
