@@ -18,6 +18,8 @@ protected:
 public:
     Grid(const Region & sRegionNO, const Region & sRegionN, const Region & sRegionNE, const Region & sRegionO, const Region & sRegionC, const Region & sRegionE, const Region & sRegionSO, const Region & sRegionS, const Region & sRegionSE);
     virtual ~Grid();
+    
+    virtual bool IsFull() const;
 };
 
 #endif

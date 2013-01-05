@@ -17,6 +17,8 @@ protected:
 public:
     Region(const std::string & cString);
     virtual ~Region();
+    
+    virtual bool IsFull() const;
 };
 
 #endif

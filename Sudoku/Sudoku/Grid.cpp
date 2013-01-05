@@ -25,3 +25,8 @@ sRegionSE_(sRegionSE)
 
 Grid::~Grid()
 {}
+
+bool Grid::IsFull() const
+{
+    return sRegionC_.IsFull() && sRegionE_.IsFull() && sRegionN_.IsFull() && sRegionNE_.IsFull() && sRegionNO_.IsFull() && sRegionO_.IsFull() && sRegionS_.IsFull() && sRegionSE_.IsFull() && sRegionSO_.IsFull();
+}
