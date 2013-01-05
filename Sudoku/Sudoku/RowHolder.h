@@ -1,0 +1,24 @@
+//
+//  RowHolder.h
+//  Sudoku
+//
+//  Created by Alexandre HUMEAU on 05/01/13.
+//  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
+//
+
+#ifndef Sudoku_RowHolder_h
+#define Sudoku_RowHolder_h
+
+#include "TripleHolder.h"
+
+class RowHolder : public TripleHolder{
+    
+public:
+    RowHolder(const Cell & sG, const Cell & sC, const Cell & sD);
+    
+    const Cell & G() const;
+    const Cell & D() const;
+    const Cell & C() const;
+};
+
+#endif
