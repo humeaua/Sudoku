@@ -11,6 +11,7 @@
 		4F011D6616983FB000A92D97 /* TripleHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F011D6516983FB000A92D97 /* TripleHolder.cpp */; };
 		4F011D6916985AA400A92D97 /* RowHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F011D6816985AA400A92D97 /* RowHolder.cpp */; };
 		4F011D6C16985BA200A92D97 /* ColumnHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F011D6B16985BA200A92D97 /* ColumnHolder.cpp */; };
+		4F011D6F16985EFB00A92D97 /* RegionHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F011D6E16985EFB00A92D97 /* RegionHolder.cpp */; };
 		4F5AA1D61696E82200DC0F1C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5AA1D51696E82200DC0F1C /* main.cpp */; };
 		4F5AA1D81696E82200DC0F1C /* Sudoku.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4F5AA1D71696E82200DC0F1C /* Sudoku.1 */; };
 		4F5AA1E01696E9DB00DC0F1C /* Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5AA1DF1696E9DB00DC0F1C /* Cell.cpp */; };
@@ -39,6 +40,8 @@
 		4F011D6816985AA400A92D97 /* RowHolder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RowHolder.cpp; sourceTree = "<group>"; };
 		4F011D6A16985B1B00A92D97 /* ColumnHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnHolder.h; sourceTree = "<group>"; };
 		4F011D6B16985BA200A92D97 /* ColumnHolder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ColumnHolder.cpp; sourceTree = "<group>"; };
+		4F011D6D16985E7300A92D97 /* RegionHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionHolder.h; sourceTree = "<group>"; };
+		4F011D6E16985EFB00A92D97 /* RegionHolder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegionHolder.cpp; sourceTree = "<group>"; };
 		4F5AA1D11696E82200DC0F1C /* Sudoku */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sudoku; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F5AA1D51696E82200DC0F1C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4F5AA1D71696E82200DC0F1C /* Sudoku.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Sudoku.1; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 				4F011D6816985AA400A92D97 /* RowHolder.cpp */,
 				4F011D6A16985B1B00A92D97 /* ColumnHolder.h */,
 				4F011D6B16985BA200A92D97 /* ColumnHolder.cpp */,
+				4F011D6D16985E7300A92D97 /* RegionHolder.h */,
+				4F011D6E16985EFB00A92D97 /* RegionHolder.cpp */,
 				4F5AA1E11696ED8500DC0F1C /* Region.h */,
 				4F5AA1E2169733CB00DC0F1C /* Region.cpp */,
 				4F011D60169839E200A92D97 /* Grid.h */,
@@ -153,6 +158,7 @@
 				4F011D6616983FB000A92D97 /* TripleHolder.cpp in Sources */,
 				4F011D6916985AA400A92D97 /* RowHolder.cpp in Sources */,
 				4F011D6C16985BA200A92D97 /* ColumnHolder.cpp in Sources */,
+				4F011D6F16985EFB00A92D97 /* RegionHolder.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
