@@ -19,51 +19,73 @@ std::pair<std::vector<unsigned int>, std::vector<unsigned int> > LastCellFinder:
     if (!s1_.GetLeft().IsEmpty())
     {
         iCells.push_back(s1_.GetLeft());
+    }
+    else
+    {
         iEmptyCells.push_back(1);
     }
     if (!s1_.GetCenter().IsEmpty())
     {
         iCells.push_back(s1_.GetCenter());
+    }
+    else
+    {
         iEmptyCells.push_back(2);
     }
     if (!s1_.GetRight().IsEmpty())
     {
         iCells.push_back(s1_.GetRight());
+    }
+    else
+    {
         iEmptyCells.push_back(3);
     }
     if (!s2_.GetLeft().IsEmpty())
     {
         iCells.push_back(s2_.GetLeft());
-        
+    }
+    else
+    {
         iEmptyCells.push_back(4);
     }
     if (!s2_.GetCenter().IsEmpty())
     {
         iCells.push_back(s2_.GetCenter());
+    }
+    else
+    {
         iEmptyCells.push_back(5);
     }
     if (!s2_.GetRight().IsEmpty())
     {
         iCells.push_back(s2_.GetRight());
-        
+    }
+    else
+    {
         iEmptyCells.push_back(6);
     }
     if (!s3_.GetLeft().IsEmpty())
     {
         iCells.push_back(s3_.GetLeft());
-        
+    }
+    else
+    {
         iEmptyCells.push_back(7);
     }
     if (!s3_.GetCenter().IsEmpty())
     {
         iCells.push_back(s3_.GetCenter());
-        
+    }
+    else
+    {
         iEmptyCells.push_back(8);
     }
     if (!s3_.GetRight().IsEmpty())
     {
         iCells.push_back(s3_.GetRight());
-        
+    }
+    else
+    {
         iEmptyCells.push_back(9);
     }
     return std::make_pair(iEmptyCells, iCells);
@@ -91,6 +113,10 @@ bool LastCellFinder::fill()
         {
             iMissingValue = EmptyCellsAndCellValues.second[i - 1] + 1;
             goto AFFECT;
+        }
+        else if (EmptyCellsAndCellValues.second[i] - EmptyCellsAndCellValues.second[i - 1] == 0)
+        {
+            throw "TripleHolder was badly initialized";
         }
     }
     iMissingValue = 9;
