@@ -12,17 +12,17 @@
 RowHolder::RowHolder(const Cell & sG, const Cell & sC, const Cell & sD) : TripleHolder(sG, sC, sD)
 {}
 
-const Cell & RowHolder::G() const
+Cell & RowHolder::G()
 {
     return GetLeft();
 }
 
-const Cell & RowHolder::C() const
+Cell & RowHolder::C()
 {
     return GetCenter();
 }
 
-const Cell & RowHolder::D() const
+Cell & RowHolder::D()
 {
     return GetRight();
 }

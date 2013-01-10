@@ -16,17 +16,17 @@ TripleHolder::TripleHolder(const Cell & sLeft, const Cell & sCenter, const Cell 
     sLeft_ = sLeft;
 }
 
-const Cell & TripleHolder::GetLeft() const
+Cell & TripleHolder::GetLeft()
 {
     return sLeft_;
 }
 
-const Cell & TripleHolder::GetCenter() const
+Cell & TripleHolder::GetCenter()
 {
     return sCenter_;
 }
 
-const Cell & TripleHolder::GetRight() const
+Cell & TripleHolder::GetRight()
 {
     return sRight_;
 }

@@ -16,9 +16,9 @@ class ColumnHolder : public TripleHolder {
 public:
     ColumnHolder(const Cell & sTop, const Cell & sCenter, const Cell & sBottom);
     
-    virtual const Cell & T() const;
-    virtual const Cell & C() const;
-    virtual const Cell & B() const;
+    virtual Cell & T();
+    virtual Cell & C();
+    virtual Cell & B();
 };
 
 #endif

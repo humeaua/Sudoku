@@ -12,17 +12,17 @@
 ColumnHolder::ColumnHolder(const Cell & sTop, const Cell & sCenter, const Cell & sBottom) : TripleHolder(sTop, sCenter, sBottom)
 {}
 
-const Cell & ColumnHolder::T() const
+Cell & ColumnHolder::T()
 {
     return GetLeft();
 }
 
-const Cell & ColumnHolder::C() const
+Cell & ColumnHolder::C()
 {
     return GetCenter();
 }
 
-const Cell & ColumnHolder::B() const
+Cell & ColumnHolder::B()
 {
     return GetRight();
 }

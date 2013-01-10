@@ -17,9 +17,9 @@ protected:
 public:
     TripleHolder(const Cell & sLeft, const Cell & sCenter, const Cell & sRight);
     
-    virtual const Cell & GetLeft() const;
-    virtual const Cell & GetCenter() const;
-    virtual const Cell & GetRight() const;
+    virtual Cell & GetLeft();
+    virtual Cell & GetCenter();
+    virtual Cell & GetRight();
 };
 
 #endif
