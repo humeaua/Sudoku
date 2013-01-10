@@ -10,7 +10,7 @@
 #include "Cell.h"
 #include <exception>
 
-Cell::Cell() : bIsEmpty_(true)
+Cell::Cell() : bIsEmpty_(true), iValue_(0)
 {}
 
 Cell::Cell(const unsigned int iValue) : iValue_(iValue), bIsEmpty_(false)
