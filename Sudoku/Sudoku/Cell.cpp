@@ -32,6 +32,7 @@ bool Cell::IsEmpty() const
 Cell & Cell::operator=(unsigned int iValue)
 {
     iValue_ = iValue;
+    bIsEmpty_ = false;
     return *this;
 }
 
