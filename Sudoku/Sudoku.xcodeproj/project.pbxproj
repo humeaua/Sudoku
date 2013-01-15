@@ -52,6 +52,7 @@
 		4F5AA1DF1696E9DB00DC0F1C /* Cell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cell.cpp; sourceTree = "<group>"; };
 		4F5AA1E11696ED8500DC0F1C /* Region.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Region.h; sourceTree = "<group>"; };
 		4F5AA1E2169733CB00DC0F1C /* Region.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Region.cpp; sourceTree = "<group>"; };
+		4F7ECB7016A58C880009A0EC /* IVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVisitor.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				4F5AA1DE1696E96E00DC0F1C /* Cell.h */,
+				4F7ECB7016A58C880009A0EC /* IVisitor.h */,
 				4F5AA1DF1696E9DB00DC0F1C /* Cell.cpp */,
 				4F011D6416983E8800A92D97 /* TripleHolder.h */,
 				4F011D6516983FB000A92D97 /* TripleHolder.cpp */,
