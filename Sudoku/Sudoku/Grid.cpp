@@ -75,3 +75,8 @@ const RegionHolder Grid::GetSO() const
 {
     return RegionHolder(sRegionSO_);
 }
+
+bool Grid::Accept(const IVisitor &sVisitor)
+{
+    return sVisitor.Visit(*this);
+}

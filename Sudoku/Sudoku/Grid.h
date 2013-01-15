@@ -11,6 +11,7 @@
 
 #include <vector>
 #include "RegionHolder.h"
+#include "IVisitor.h"
 
 class Grid {
 protected:
@@ -30,6 +31,8 @@ public:
     virtual const RegionHolder GetS() const;
     virtual const RegionHolder GetSE() const;
     virtual const RegionHolder GetSO() const;
+    
+    virtual bool Accept(const IVisitor & sVisitor);
 };
 
 #endif
