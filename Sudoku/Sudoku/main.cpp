@@ -19,7 +19,8 @@ int main (int argc, const char * argv[])
     try 
     {
         //Cell sCell0, sCell1(1), sCell2(10);
-        //Region sRegion("123456789");
+        Region sRegion("123456789");
+        Region sRegion2("1-3--67-9");
         //int i = 0;
         Cell sCell1(1), sCell2(2), sCell3(3), sCell4(4), sCell5(5), sCell6(6), sCell7(7), sCell8(8), sCell9;
         TripleHolder s1(sCell1, sCell2, sCell3), s2(sCell4, sCell5, sCell6), s3(sCell7, sCell8, sCell9);

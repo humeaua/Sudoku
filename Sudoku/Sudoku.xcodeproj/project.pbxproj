@@ -89,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				4F5AA1DE1696E96E00DC0F1C /* Cell.h */,
-				4F7ECB7016A58C880009A0EC /* IVisitor.h */,
 				4F5AA1DF1696E9DB00DC0F1C /* Cell.cpp */,
 				4F011D6416983E8800A92D97 /* TripleHolder.h */,
 				4F011D6516983FB000A92D97 /* TripleHolder.cpp */,
@@ -97,16 +96,17 @@
 				4F011D6816985AA400A92D97 /* RowHolder.cpp */,
 				4F011D6A16985B1B00A92D97 /* ColumnHolder.h */,
 				4F011D6B16985BA200A92D97 /* ColumnHolder.cpp */,
-				4F011D6D16985E7300A92D97 /* RegionHolder.h */,
 				4F011D6E16985EFB00A92D97 /* RegionHolder.cpp */,
+				4F011D6D16985E7300A92D97 /* RegionHolder.h */,
 				4F5AA1E11696ED8500DC0F1C /* Region.h */,
 				4F5AA1E2169733CB00DC0F1C /* Region.cpp */,
 				4F1625A1169F52B500776803 /* LastCellFinder.h */,
 				4F1625A3169F532C00776803 /* LastCellFinder.cpp */,
 				4F011D60169839E200A92D97 /* Grid.h */,
+				4F011D6216983A9D00A92D97 /* Grid.cpp */,
 				4F7ECB7216A58F510009A0EC /* OnlyOneChoiceInRowVisitor.h */,
 				4F7ECB7316A5907F0009A0EC /* OnlyOneChoiceInRowVisitor.cpp */,
-				4F011D6216983A9D00A92D97 /* Grid.cpp */,
+				4F7ECB7016A58C880009A0EC /* IVisitor.h */,
 				4F5AA1D51696E82200DC0F1C /* main.cpp */,
 				4F5AA1D71696E82200DC0F1C /* Sudoku.1 */,
 			);
