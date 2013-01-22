@@ -19,7 +19,7 @@ protected:
     
 public:
     virtual bool Visit(const Grid & ioGrid) const;
-    virtual void MakeRowFromGrid(const Grid & ioGrid, std::map<std::size_t, std::vector<RowHolder> > & sSetOfRow) const;
+    virtual void MakeRowFromGrid(const Grid & ioGrid, std::map<std::size_t, std::vector<RowHolder> > & sMapOfColumn) const;
 };
 
 #endif
