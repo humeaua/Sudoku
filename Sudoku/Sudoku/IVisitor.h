@@ -9,6 +9,8 @@
 #ifndef Sudoku_IVisitor_h
 #define Sudoku_IVisitor_h
 
+#include "Grid.h"
+
 class Grid;
 
 class IVisitor {

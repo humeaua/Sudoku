@@ -13,6 +13,8 @@
 #include "RegionHolder.h"
 #include "IVisitor.h"
 
+class IVisitor;
+
 class Grid {
 protected:
     Region sRegionNO_, sRegionN_, sRegionNE_, sRegionO_, sRegionC_, sRegionE_, sRegionSO_, sRegionS_, sRegionSE_;
