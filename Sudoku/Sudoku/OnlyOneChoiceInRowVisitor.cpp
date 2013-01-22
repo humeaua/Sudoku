@@ -94,13 +94,14 @@ void OnlyOneChoiceInRowVisitor::MakeRowFromGrid(const Grid &ioGrid, std::map<std
 bool OnlyOneChoiceInRowVisitor::Visit(const Grid &ioGrid) const
 {
     std::map<std::size_t, std::vector<RowHolder> > sMapofRowsinGrid;
-    
+    bool bResult = false;
     MakeRowFromGrid(ioGrid, sMapofRowsinGrid);
     
     for (std::map<std::size_t, std::vector<RowHolder> >::iterator itRow = sMapofRowsinGrid.begin() ; itRow != sMapofRowsinGrid.end() ; ++itRow)
     {
         LastCellFinder sLastCellFinder(itRow->second[0], itRow->second[1], itRow->second[2]);
-        sLastCellFinder.fill();
+        bool bFill = sLastCellFinder.fill();
+        bResult = bResult || bFill;
     }
-    return true;
+    return bResult;
 }
