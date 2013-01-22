@@ -15,6 +15,7 @@
 		4F1625A4169F532C00776803 /* LastCellFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F1625A3169F532C00776803 /* LastCellFinder.cpp */; };
 		4F32454F16AF0259001BDA23 /* OnlyOneChoiceInColumnVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F32454E16AF0259001BDA23 /* OnlyOneChoiceInColumnVisitor.cpp */; };
 		4F32455216AF1DD3001BDA23 /* OnlyOneChoiceInRegionVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F32455116AF1DD3001BDA23 /* OnlyOneChoiceInRegionVisitor.cpp */; };
+		4F32455516AF263A001BDA23 /* ValueEliminator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F32455416AF263A001BDA23 /* ValueEliminator.cpp */; };
 		4F5AA1D61696E82200DC0F1C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5AA1D51696E82200DC0F1C /* main.cpp */; };
 		4F5AA1D81696E82200DC0F1C /* Sudoku.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4F5AA1D71696E82200DC0F1C /* Sudoku.1 */; };
 		4F5AA1E01696E9DB00DC0F1C /* Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5AA1DF1696E9DB00DC0F1C /* Cell.cpp */; };
@@ -52,6 +53,8 @@
 		4F32454E16AF0259001BDA23 /* OnlyOneChoiceInColumnVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OnlyOneChoiceInColumnVisitor.cpp; sourceTree = "<group>"; };
 		4F32455016AF1DAA001BDA23 /* OnlyOneChoiceInRegionVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlyOneChoiceInRegionVisitor.h; sourceTree = "<group>"; };
 		4F32455116AF1DD3001BDA23 /* OnlyOneChoiceInRegionVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OnlyOneChoiceInRegionVisitor.cpp; sourceTree = "<group>"; };
+		4F32455316AF25DC001BDA23 /* ValueEliminator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueEliminator.h; sourceTree = "<group>"; };
+		4F32455416AF263A001BDA23 /* ValueEliminator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ValueEliminator.cpp; sourceTree = "<group>"; };
 		4F5AA1D11696E82200DC0F1C /* Sudoku */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sudoku; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F5AA1D51696E82200DC0F1C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4F5AA1D71696E82200DC0F1C /* Sudoku.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Sudoku.1; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				4F32455116AF1DD3001BDA23 /* OnlyOneChoiceInRegionVisitor.cpp */,
 				4F7ECB7016A58C880009A0EC /* IVisitor.h */,
 				4F5AA1D51696E82200DC0F1C /* main.cpp */,
+				4F32455316AF25DC001BDA23 /* ValueEliminator.h */,
+				4F32455416AF263A001BDA23 /* ValueEliminator.cpp */,
 				4F5AA1D71696E82200DC0F1C /* Sudoku.1 */,
 			);
 			path = Sudoku;
@@ -185,6 +190,7 @@
 				4F7ECB7416A5907F0009A0EC /* OnlyOneChoiceInRowVisitor.cpp in Sources */,
 				4F32454F16AF0259001BDA23 /* OnlyOneChoiceInColumnVisitor.cpp in Sources */,
 				4F32455216AF1DD3001BDA23 /* OnlyOneChoiceInRegionVisitor.cpp in Sources */,
+				4F32455516AF263A001BDA23 /* ValueEliminator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
