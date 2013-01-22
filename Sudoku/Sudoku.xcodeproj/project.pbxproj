@@ -13,6 +13,7 @@
 		4F011D6C16985BA200A92D97 /* ColumnHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F011D6B16985BA200A92D97 /* ColumnHolder.cpp */; };
 		4F011D6F16985EFB00A92D97 /* RegionHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F011D6E16985EFB00A92D97 /* RegionHolder.cpp */; };
 		4F1625A4169F532C00776803 /* LastCellFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F1625A3169F532C00776803 /* LastCellFinder.cpp */; };
+		4F32454F16AF0259001BDA23 /* OnlyOneChoiceInColumnVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F32454E16AF0259001BDA23 /* OnlyOneChoiceInColumnVisitor.cpp */; };
 		4F5AA1D61696E82200DC0F1C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5AA1D51696E82200DC0F1C /* main.cpp */; };
 		4F5AA1D81696E82200DC0F1C /* Sudoku.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4F5AA1D71696E82200DC0F1C /* Sudoku.1 */; };
 		4F5AA1E01696E9DB00DC0F1C /* Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5AA1DF1696E9DB00DC0F1C /* Cell.cpp */; };
@@ -46,6 +47,8 @@
 		4F011D6E16985EFB00A92D97 /* RegionHolder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegionHolder.cpp; sourceTree = "<group>"; };
 		4F1625A1169F52B500776803 /* LastCellFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LastCellFinder.h; sourceTree = "<group>"; };
 		4F1625A3169F532C00776803 /* LastCellFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LastCellFinder.cpp; sourceTree = "<group>"; };
+		4F32454C16AF01AF001BDA23 /* OnlyOneChoiceInColumnVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlyOneChoiceInColumnVisitor.h; sourceTree = "<group>"; };
+		4F32454E16AF0259001BDA23 /* OnlyOneChoiceInColumnVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OnlyOneChoiceInColumnVisitor.cpp; sourceTree = "<group>"; };
 		4F5AA1D11696E82200DC0F1C /* Sudoku */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sudoku; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F5AA1D51696E82200DC0F1C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4F5AA1D71696E82200DC0F1C /* Sudoku.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Sudoku.1; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 				4F011D6216983A9D00A92D97 /* Grid.cpp */,
 				4F7ECB7216A58F510009A0EC /* OnlyOneChoiceInRowVisitor.h */,
 				4F7ECB7316A5907F0009A0EC /* OnlyOneChoiceInRowVisitor.cpp */,
+				4F32454C16AF01AF001BDA23 /* OnlyOneChoiceInColumnVisitor.h */,
+				4F32454E16AF0259001BDA23 /* OnlyOneChoiceInColumnVisitor.cpp */,
 				4F7ECB7016A58C880009A0EC /* IVisitor.h */,
 				4F5AA1D51696E82200DC0F1C /* main.cpp */,
 				4F5AA1D71696E82200DC0F1C /* Sudoku.1 */,
@@ -173,6 +178,7 @@
 				4F011D6F16985EFB00A92D97 /* RegionHolder.cpp in Sources */,
 				4F1625A4169F532C00776803 /* LastCellFinder.cpp in Sources */,
 				4F7ECB7416A5907F0009A0EC /* OnlyOneChoiceInRowVisitor.cpp in Sources */,
+				4F32454F16AF0259001BDA23 /* OnlyOneChoiceInColumnVisitor.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
