@@ -10,8 +10,6 @@
 #define Sudoku_OnlyOneChoiceInRegionVisitor_h
 
 #include "IVisitor.h"
-#include <vector>
-#include <map>
 
 class OnlyOneChoiceInRegionVisitor : public IVisitor {
 protected:
