@@ -24,15 +24,15 @@ public:
     
     virtual bool IsFull() const;
     
-    virtual const RegionHolder GetNO() const;
-    virtual const RegionHolder GetNE() const;
-    virtual const RegionHolder GetN() const;
-    virtual const RegionHolder GetO() const;
-    virtual const RegionHolder GetC() const;
-    virtual const RegionHolder GetE() const;
-    virtual const RegionHolder GetS() const;
-    virtual const RegionHolder GetSE() const;
-    virtual const RegionHolder GetSO() const;
+    virtual const RegionHolder GetNO();
+    virtual const RegionHolder GetNE();
+    virtual const RegionHolder GetN();
+    virtual const RegionHolder GetO();
+    virtual const RegionHolder GetC();
+    virtual const RegionHolder GetE();
+    virtual const RegionHolder GetS();
+    virtual const RegionHolder GetSE();
+    virtual const RegionHolder GetSO();
     
     virtual bool Accept(const IVisitor & sVisitor);
 };

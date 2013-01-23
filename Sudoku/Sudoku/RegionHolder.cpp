@@ -9,7 +9,7 @@
 #include <iostream>
 #include "RegionHolder.h"
 
-RegionHolder::RegionHolder(const Region & sRegion) : Region(sRegion)
+RegionHolder::RegionHolder(Region & sRegion) : sNO_(sRegion.sNO_), sN_(sRegion.sN_), sNE_(sRegion.sNE_), sO_(sRegion.sO_), sC_(sRegion.sC_), sE_(sRegion.sE_), sSE_(sRegion.sSE_), sS_(sRegion.sS_), sSO_(sRegion.sSO_)
 {}
 
 const Cell & RegionHolder::GetNO() const

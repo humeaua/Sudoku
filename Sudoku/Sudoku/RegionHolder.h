@@ -13,11 +13,19 @@
 #include "RowHolder.h"
 #include "ColumnHolder.h"
 
-class RegionHolder : public Region{
+class RegionHolder{
 protected:
-    
+    Cell &sNO_;
+    Cell &sN_;
+    Cell &sNE_;
+    Cell &sO_;
+    Cell &sC_;
+    Cell &sE_;
+    Cell &sSO_;
+    Cell &sS_;
+    Cell &sSE_;
 public:
-    RegionHolder(const Region & sRegion);
+    RegionHolder(Region & sRegion);
     
     virtual const Cell & GetNO() const;
     virtual const Cell & GetNE() const;
