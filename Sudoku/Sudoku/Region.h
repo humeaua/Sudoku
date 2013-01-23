@@ -12,9 +12,9 @@
 #include "Cell.h"
 
 class Region {
-protected:
-    Cell sN_, sS_, sE_, sO_, sNE_, sSE_, sNO_, sSO_, sC_;
 public:
+    Cell sN_, sS_, sE_, sO_, sNE_, sSE_, sNO_, sSO_, sC_;
+    
     Region(const std::string & cString);
     virtual ~Region();
     
