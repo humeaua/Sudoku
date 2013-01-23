@@ -43,6 +43,13 @@ public:
     virtual ColumnHolder LeftColumn();
     virtual ColumnHolder MiddleColumn();
     virtual ColumnHolder RightColumn();
+    
+    virtual const RowHolder TopRow() const;
+    virtual const RowHolder MiddleRow() const;
+    virtual const RowHolder BottomRow() const;
+    virtual const ColumnHolder LeftColumn() const;
+    virtual const ColumnHolder MiddleColumn() const;
+    virtual const ColumnHolder RightColumn() const;
 };
 
 #endif
