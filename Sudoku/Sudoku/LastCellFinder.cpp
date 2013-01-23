@@ -9,7 +9,7 @@
 #include <iostream>
 #include "LastCellFinder.h"
 
-LastCellFinder::LastCellFinder(const TripleHolder & s1, const TripleHolder & s2, const TripleHolder & s3) : s1_(s1), s2_(s2), s3_(s3)
+LastCellFinder::LastCellFinder(TripleHolder & s1, TripleHolder & s2, TripleHolder & s3) : s1_(s1), s2_(s2), s3_(s3)
 {}
 
 // We introduce a base method for lastCellfinder

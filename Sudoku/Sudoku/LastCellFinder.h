@@ -14,9 +14,9 @@
 
 class LastCellFinder {
 protected:
-    TripleHolder s1_, s2_, s3_;
+    TripleHolder &s1_, &s2_, &s3_;
 public:
-    LastCellFinder(const TripleHolder & s1, const TripleHolder & s2, const TripleHolder & s3);
+    LastCellFinder(TripleHolder & s1, TripleHolder & s2, TripleHolder & s3);
     bool fill();
     
     std::pair<std::vector<unsigned int>, std::vector<unsigned int> > EmptyCells();
