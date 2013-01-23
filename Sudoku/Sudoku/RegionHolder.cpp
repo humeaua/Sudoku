@@ -12,47 +12,47 @@
 RegionHolder::RegionHolder(Region & sRegion) : sNO_(sRegion.sNO_), sN_(sRegion.sN_), sNE_(sRegion.sNE_), sO_(sRegion.sO_), sC_(sRegion.sC_), sE_(sRegion.sE_), sSE_(sRegion.sSE_), sS_(sRegion.sS_), sSO_(sRegion.sSO_)
 {}
 
-const Cell & RegionHolder::GetNO() const
+Cell & RegionHolder::GetNO()
 {
     return sNO_;
 }
 
-const Cell & RegionHolder::GetNE() const
+Cell & RegionHolder::GetNE()
 {
     return sNE_;
 }
 
-const Cell & RegionHolder::GetN() const
+Cell & RegionHolder::GetN()
 {
     return sN_;
 }
 
-const Cell & RegionHolder::GetO() const
+Cell & RegionHolder::GetO()
 {
     return sO_;
 }
 
-const Cell & RegionHolder::GetC() const
+Cell & RegionHolder::GetC() 
 {
     return sC_;
 }
 
-const Cell & RegionHolder::GetE() const
+Cell & RegionHolder::GetE() 
 {
     return sE_;
 }
 
-const Cell & RegionHolder::GetS() const
+Cell & RegionHolder::GetS()
 {
     return sS_;
 }
 
-const Cell & RegionHolder::GetSO() const
+Cell & RegionHolder::GetSO()
 {
     return sSO_;
 }
 
-const Cell & RegionHolder::GetSE() const
+Cell & RegionHolder::GetSE()
 {
     return sSE_;
 }

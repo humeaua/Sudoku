@@ -27,15 +27,15 @@ protected:
 public:
     RegionHolder(Region & sRegion);
     
-    virtual const Cell & GetNO() const;
-    virtual const Cell & GetNE() const;
-    virtual const Cell & GetN() const;
-    virtual const Cell & GetO() const;
-    virtual const Cell & GetC() const;
-    virtual const Cell & GetE() const;
-    virtual const Cell & GetS() const;
-    virtual const Cell & GetSO() const;
-    virtual const Cell & GetSE() const;
+    virtual Cell & GetNO();
+    virtual Cell & GetNE();
+    virtual Cell & GetN();
+    virtual Cell & GetO();
+    virtual Cell & GetC();
+    virtual Cell & GetE();
+    virtual Cell & GetS();
+    virtual Cell & GetSO();
+    virtual Cell & GetSE();
 
     virtual RowHolder TopRow();
     virtual RowHolder MiddleRow();
