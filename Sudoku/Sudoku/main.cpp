@@ -44,7 +44,8 @@ int main (int argc, const char * argv[])
             //  Test of Only one choice in Row Vistor
             Region sRegion0("-23-56-89"), sRegion1("456789123"), sRegion2("789123456"); // to test OnlyOneChoiceInRowVisitor
             Grid sGrid(sRegion0, sRegion1, sRegion2, sRegion0, sRegion1, sRegion2, sRegion0, sRegion1, sRegion2);
-            //OnlyOneChoiceInRowVisitor sOnlyOneChoiceInRowVisitor;       
+            OnlyOneChoiceInRowVisitor sOnlyOneChoiceInRowVisitor;  
+            std::cout << sOnlyOneChoiceInRowVisitor.Visit(sGrid) << std::endl;
         }
         std::cout << "Done!" << std::endl;
     } 
