@@ -21,6 +21,7 @@
 		4F5AA1E01696E9DB00DC0F1C /* Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5AA1DF1696E9DB00DC0F1C /* Cell.cpp */; };
 		4F5AA1E3169733CB00DC0F1C /* Region.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5AA1E2169733CB00DC0F1C /* Region.cpp */; };
 		4F7ECB7416A5907F0009A0EC /* OnlyOneChoiceInRowVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7ECB7316A5907F0009A0EC /* OnlyOneChoiceInRowVisitor.cpp */; };
+		4F84140B16B07B00008FE9C6 /* IVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F84140A16B07B00008FE9C6 /* IVisitor.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +66,7 @@
 		4F7ECB7016A58C880009A0EC /* IVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVisitor.h; sourceTree = "<group>"; };
 		4F7ECB7216A58F510009A0EC /* OnlyOneChoiceInRowVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlyOneChoiceInRowVisitor.h; sourceTree = "<group>"; };
 		4F7ECB7316A5907F0009A0EC /* OnlyOneChoiceInRowVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OnlyOneChoiceInRowVisitor.cpp; sourceTree = "<group>"; };
+		4F84140A16B07B00008FE9C6 /* IVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IVisitor.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				4F32455016AF1DAA001BDA23 /* OnlyOneChoiceInRegionVisitor.h */,
 				4F32455116AF1DD3001BDA23 /* OnlyOneChoiceInRegionVisitor.cpp */,
 				4F7ECB7016A58C880009A0EC /* IVisitor.h */,
+				4F84140A16B07B00008FE9C6 /* IVisitor.cpp */,
 				4F5AA1D51696E82200DC0F1C /* main.cpp */,
 				4F32455316AF25DC001BDA23 /* ValueEliminator.h */,
 				4F32455416AF263A001BDA23 /* ValueEliminator.cpp */,
@@ -191,6 +194,7 @@
 				4F32454F16AF0259001BDA23 /* OnlyOneChoiceInColumnVisitor.cpp in Sources */,
 				4F32455216AF1DD3001BDA23 /* OnlyOneChoiceInRegionVisitor.cpp in Sources */,
 				4F32455516AF263A001BDA23 /* ValueEliminator.cpp in Sources */,
+				4F84140B16B07B00008FE9C6 /* IVisitor.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

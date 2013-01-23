@@ -17,7 +17,7 @@ class IVisitor {
 protected:
     
 public:
-    virtual bool Visit(Grid & ioGrid) const = 0; // pure virtual method
+    virtual bool Visit(Grid & ioGrid) const;
 };
 
 #endif
