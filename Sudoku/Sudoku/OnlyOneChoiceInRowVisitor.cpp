@@ -12,7 +12,7 @@
 #include "LastCellFinder.h"
 #include "RegionHolder.h"
 
-void OnlyOneChoiceInRowVisitor::MakeRowFromGrid(const Grid &ioGrid, std::map<std::size_t, std::vector<RowHolder> > &sMapOfRow) const
+/*void OnlyOneChoiceInRowVisitor::MakeRowFromGrid(const Grid &ioGrid, std::map<std::size_t, std::vector<RowHolder> > &sMapOfRow) const
 {
     //  This function creates a set of vector of row holder ( = set of rows ) from a specified grid
     std::vector<RowHolder> sVectorOfRowHolder;
@@ -104,4 +104,4 @@ bool OnlyOneChoiceInRowVisitor::Visit(const Grid &ioGrid) const
         bResult = bResult || bFill;
     }
     return bResult;
-}
+}*/

@@ -11,13 +11,13 @@
 
 #include "IVisitor.h"
 
-class OnlyOneChoiceInRegionVisitor : public IVisitor {
+/*class OnlyOneChoiceInRegionVisitor : public IVisitor {
 protected:
     
 public:
     virtual bool Visit(const Grid & ioGrid) const;
     
-};
+};*/
 
 
 #endif

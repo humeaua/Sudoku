@@ -86,33 +86,3 @@ ColumnHolder RegionHolder::RightColumn()
 {
     return ColumnHolder(sNE_, sE_, sSE_);
 }
-
-RowHolder RegionHolder::TopRow() const
-{
-    return RowHolder(sNO_, sN_, sNE_);
-}
-
-RowHolder RegionHolder::MiddleRow() const
-{
-    return RowHolder(sO_, sC_, sE_);
-}
-
-RowHolder RegionHolder::BottomRow() const
-{
-    return RowHolder(sSE_, sS_, sSO_);
-}
-
-ColumnHolder RegionHolder::LeftColumn() const
-{
-    return ColumnHolder(sNO_, sO_, sSO_);
-}
-
-ColumnHolder RegionHolder::MiddleColumn() const
-{
-    return ColumnHolder(sN_, sC_, sS_);
-}
-
-ColumnHolder RegionHolder::RightColumn() const
-{
-    return ColumnHolder(sNE_, sE_, sSE_);
-}

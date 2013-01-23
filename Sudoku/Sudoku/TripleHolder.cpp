@@ -9,12 +9,8 @@
 #include <iostream>
 #include "TripleHolder.h"
 
-TripleHolder::TripleHolder(const Cell & sLeft, const Cell & sCenter, const Cell & sRight)
-{
-    sRight_ = sRight;
-    sCenter_ = sCenter;
-    sLeft_ = sLeft;
-}
+TripleHolder::TripleHolder(Cell & sLeft, Cell & sCenter, Cell & sRight) : sLeft_(sLeft), sCenter_(sCenter), sRight_(sRight)
+{}
 
 Cell & TripleHolder::GetLeft()
 {

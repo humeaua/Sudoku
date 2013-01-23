@@ -13,9 +13,11 @@
 
 class TripleHolder {
 protected:
-    Cell sLeft_, sCenter_, sRight_;
+    Cell &sLeft_;
+    Cell &sCenter_;
+    Cell &sRight_;
 public:
-    TripleHolder(const Cell & sLeft, const Cell & sCenter, const Cell & sRight);
+    TripleHolder(Cell & sLeft, Cell & sCenter, Cell & sRight);
     
     virtual Cell & GetLeft();
     virtual Cell & GetCenter();

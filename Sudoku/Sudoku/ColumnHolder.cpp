@@ -9,7 +9,7 @@
 #include <iostream>
 #include "ColumnHolder.h"
 
-ColumnHolder::ColumnHolder(const Cell & sTop, const Cell & sCenter, const Cell & sBottom) : TripleHolder(sTop, sCenter, sBottom)
+ColumnHolder::ColumnHolder(Cell & sTop, Cell & sCenter, Cell & sBottom) : TripleHolder(sTop, sCenter, sBottom)
 {}
 
 Cell & ColumnHolder::T()

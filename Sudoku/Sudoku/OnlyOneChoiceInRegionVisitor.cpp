@@ -10,7 +10,7 @@
 #include "OnlyOneChoiceInRegionVisitor.h"
 #include "LastCellFinder.h"
 
-bool OnlyOneChoiceInRegionVisitor::Visit(const Grid &ioGrid) const
+/*bool OnlyOneChoiceInRegionVisitor::Visit(const Grid &ioGrid) const
 {
     bool bResult = false;
     
@@ -60,4 +60,4 @@ bool OnlyOneChoiceInRegionVisitor::Visit(const Grid &ioGrid) const
     bResult = bFill || bResult;
     
     return bResult;
-}
+}*/

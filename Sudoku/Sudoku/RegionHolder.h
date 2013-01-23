@@ -35,13 +35,6 @@ public:
     virtual ColumnHolder LeftColumn();
     virtual ColumnHolder MiddleColumn();
     virtual ColumnHolder RightColumn();
-    
-    virtual RowHolder TopRow() const;
-    virtual RowHolder MiddleRow() const;
-    virtual RowHolder BottomRow() const;
-    virtual ColumnHolder LeftColumn() const;
-    virtual ColumnHolder MiddleColumn() const;
-    virtual ColumnHolder RightColumn() const;
 };
 
 #endif

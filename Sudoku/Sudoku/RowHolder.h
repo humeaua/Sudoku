@@ -14,7 +14,7 @@
 class RowHolder : public TripleHolder{
     
 public:
-    RowHolder(const Cell & sG, const Cell & sC, const Cell & sD);
+    RowHolder(Cell & sG, Cell & sC, Cell & sD);
     
     virtual Cell & G();
     virtual Cell & D();

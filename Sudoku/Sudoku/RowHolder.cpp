@@ -9,7 +9,7 @@
 #include <iostream>
 #include "RowHolder.h"
 
-RowHolder::RowHolder(const Cell & sG, const Cell & sC, const Cell & sD) : TripleHolder(sG, sC, sD)
+RowHolder::RowHolder(Cell & sG, Cell & sC, Cell & sD) : TripleHolder(sG, sC, sD)
 {}
 
 Cell & RowHolder::G()
