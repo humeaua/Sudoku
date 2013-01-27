@@ -25,6 +25,7 @@ public:
     virtual Cell & GetRight();
     
     virtual void flagValues(ValueEliminator & sValueEliminator) const;
+    virtual bool isValuePresent(unsigned int iValue) const;
 };
 
 #endif

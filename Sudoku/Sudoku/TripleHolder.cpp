@@ -45,3 +45,10 @@ void TripleHolder::flagValues(ValueEliminator &sValueEliminator) const
         sValueEliminator.SetTrue(iValue);
     }
 }
+
+bool TripleHolder::isValuePresent(unsigned int iValue) const
+{
+    ValueEliminator sValueEliminator;
+    flagValues(sValueEliminator);
+    return sValueEliminator.flag(iValue);
+}
