@@ -13,6 +13,7 @@
 #include "TripleHolder.h"
 #include "LastCellFinder.h"
 #include "OnlyOneChoiceInRowVisitor.h"
+#include "OnlyOneChoiceInColumnVisitor.h"
 
 int main (int argc, const char * argv[])
 {
@@ -23,6 +24,7 @@ int main (int argc, const char * argv[])
         std::cout << "Choose the test : " << std::endl;
         std::cout << "1- Basic Last cell finder" << std::endl;
         std::cout << "2- Only One Choice In Row Visitor" << std::endl;
+        std::cout << "3- Only One Choice In Column Visitor" << std::endl;
         std::size_t iTest = 1;
         std::cin >> iTest;
         
@@ -46,6 +48,14 @@ int main (int argc, const char * argv[])
             Grid sGrid(sRegion0, sRegion1, sRegion2, sRegion0, sRegion1, sRegion2, sRegion0, sRegion1, sRegion2);
             OnlyOneChoiceInRowVisitor sOnlyOneChoiceInRowVisitor;  
             std::cout << sOnlyOneChoiceInRowVisitor.Visit(sGrid) << std::endl;
+        }
+        else if (iTest == 3)
+        {
+            //  Test of Only one choice in Column Visitor
+            Region sRegion0("---222333"), sRegion1("444555666"), sRegion2("777888999"); // to test OnlyOneChoiceInColumnVisitor
+            Grid sGrid(sRegion0, sRegion0, sRegion0, sRegion1, sRegion1, sRegion1, sRegion2, sRegion2, sRegion2);
+            OnlyOneChoiceInColumnVisitor sOnlyOneChoiceInColumnVisitor;  
+            std::cout << sOnlyOneChoiceInColumnVisitor.Visit(sGrid) << std::endl;
         }
         std::cout << "Done!" << std::endl;
     } 
