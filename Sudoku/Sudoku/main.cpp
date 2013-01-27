@@ -14,6 +14,7 @@
 #include "LastCellFinder.h"
 #include "OnlyOneChoiceInRowVisitor.h"
 #include "OnlyOneChoiceInColumnVisitor.h"
+#include "OnlyOneChoiceInRegionVisitor.h"
 
 int main (int argc, const char * argv[])
 {
@@ -25,6 +26,7 @@ int main (int argc, const char * argv[])
         std::cout << "1- Basic Last cell finder" << std::endl;
         std::cout << "2- Only One Choice In Row Visitor" << std::endl;
         std::cout << "3- Only One Choice In Column Visitor" << std::endl;
+        std::cout << "4- Only One Choice In Region Visitor" << std::endl;
         std::size_t iTest = 1;
         std::cin >> iTest;
         
@@ -56,6 +58,13 @@ int main (int argc, const char * argv[])
             Grid sGrid(sRegion0, sRegion0, sRegion0, sRegion1, sRegion1, sRegion1, sRegion2, sRegion2, sRegion2);
             OnlyOneChoiceInColumnVisitor sOnlyOneChoiceInColumnVisitor;  
             std::cout << sOnlyOneChoiceInColumnVisitor.Visit(sGrid) << std::endl;
+        }
+        else if (iTest == 4)
+        {
+            Region sRegion("-23456789");
+            Grid sGrid(sRegion, sRegion, sRegion, sRegion, sRegion, sRegion, sRegion, sRegion, sRegion);
+            OnlyOneChoiceInRegionVisitor sOnlyOneChoiceInRegionVisitor;
+            std::cout << sOnlyOneChoiceInRegionVisitor.Visit(sGrid) << std::endl;
         }
         std::cout << "Done!" << std::endl;
     } 
