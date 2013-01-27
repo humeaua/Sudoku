@@ -165,3 +165,10 @@ void RegionHolder::flagValues(ValueEliminator &sValueEliminator) const
         sValueEliminator.SetTrue(iValue);
     }
 }
+
+bool RegionHolder::isValuePresent(unsigned int iValue) const
+{
+    ValueEliminator sValueEliminator;
+    flagValues(sValueEliminator);
+    return sValueEliminator.flag(iValue);
+}

@@ -53,6 +53,7 @@ public:
     virtual const ColumnHolder RightColumn() const;
     
     virtual void flagValues(ValueEliminator & sValueEliminator) const;
+    virtual bool isValuePresent(unsigned int iValue) const;
 };
 
 #endif
