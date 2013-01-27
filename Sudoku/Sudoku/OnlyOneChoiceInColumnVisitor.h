@@ -15,12 +15,11 @@
 #include <map>
 #include "RowHolder.h"
 
-/*class OnlyOneChoiceInColumnVisitor : public IVisitor {
+class OnlyOneChoiceInColumnVisitor : public IVisitor {
 protected:
     
 public:
-    virtual bool Visit(const Grid & ioGrid) const;
-    virtual void MakeColumnFromGrid(const Grid & ioGrid, std::map<std::size_t, std::vector<ColumnHolder> > & sSetOfRow) const;
-};*/
+    virtual bool Visit(Grid & ioGrid) const;
+};
 
 #endif
