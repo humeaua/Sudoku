@@ -58,3 +58,8 @@ std::set<unsigned int> ValueEliminator::availableValue() const
     }
     return sResult;
 }
+
+void ValueEliminator::SetTrue(unsigned int iValue)
+{
+    bValues_[iValue] = true;
+}
