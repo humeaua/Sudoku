@@ -26,3 +26,22 @@ Cell & TripleHolder::GetRight()
 {
     return sRight_;
 }
+
+void TripleHolder::flagValues(ValueEliminator &sValueEliminator) const
+{
+    if (!sLeft_.IsEmpty())
+    {
+        unsigned int iValue = sLeft_ - 1;
+        sValueEliminator.SetTrue(iValue);
+    }
+    if (!sCenter_.IsEmpty())
+    {
+        unsigned int iValue = sCenter_ - 1;
+        sValueEliminator.SetTrue(iValue);
+    }
+    if (!sRight_.IsEmpty())
+    {
+        unsigned int iValue = sRight_ - 1;
+        sValueEliminator.SetTrue(iValue);
+    }
+}

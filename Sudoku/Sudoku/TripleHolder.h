@@ -10,6 +10,7 @@
 #define Sudoku_TripleHolder_h
 
 #include "Cell.h"
+#include "ValueEliminator.h"
 
 class TripleHolder {
 protected:
@@ -22,6 +23,8 @@ public:
     virtual Cell & GetLeft();
     virtual Cell & GetCenter();
     virtual Cell & GetRight();
+    
+    virtual void flagValues(ValueEliminator & sValueEliminator) const;
 };
 
 #endif
