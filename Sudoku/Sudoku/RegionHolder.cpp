@@ -116,3 +116,43 @@ const ColumnHolder RegionHolder::RightColumn() const
 {
     return ColumnHolder(sNE_, sE_, sSE_);
 }
+
+void RegionHolder::flagValues(ValueEliminator &sValueEliminator) const
+{
+    if (!sNO_.IsEmpty())
+    {
+        sValueEliminator.SetTrue(0);
+    }
+    if (!sN_.IsEmpty())
+    {
+        sValueEliminator.SetTrue(1);
+    }
+    if (!sNE_.IsEmpty())
+    {
+        sValueEliminator.SetTrue(2);
+    }
+    if (!sO_.IsEmpty())
+    {
+        sValueEliminator.SetTrue(3);
+    }
+    if (sC_.IsEmpty())
+    {
+        sValueEliminator.SetTrue(4);
+    }
+    if (!sE_.IsEmpty())
+    {
+        sValueEliminator.SetTrue(5);
+    }
+    if (!sSO_.IsEmpty())
+    {
+        sValueEliminator.SetTrue(6);
+    }
+    if (!sS_.IsEmpty())
+    {
+        sValueEliminator.SetTrue(7);
+    }
+    if (!sSE_.IsEmpty())
+    {
+        sValueEliminator.SetTrue(8);
+    }
+}

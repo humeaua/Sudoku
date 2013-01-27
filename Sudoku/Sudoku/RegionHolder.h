@@ -12,6 +12,7 @@
 #include "Region.h"
 #include "RowHolder.h"
 #include "ColumnHolder.h"
+#include "ValueEliminator.h"
 
 class RegionHolder{
 protected:
@@ -50,6 +51,8 @@ public:
     virtual const ColumnHolder LeftColumn() const;
     virtual const ColumnHolder MiddleColumn() const;
     virtual const ColumnHolder RightColumn() const;
+    
+    virtual void flagValues(ValueEliminator & sValueEliminator) const;
 };
 
 #endif
