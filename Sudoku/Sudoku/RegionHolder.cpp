@@ -121,38 +121,47 @@ void RegionHolder::flagValues(ValueEliminator &sValueEliminator) const
 {
     if (!sNO_.IsEmpty())
     {
-        sValueEliminator.SetTrue(0);
+        unsigned int iValue = sNO_ - 1;
+        sValueEliminator.SetTrue(iValue);
     }
     if (!sN_.IsEmpty())
     {
-        sValueEliminator.SetTrue(1);
+        unsigned int iValue = sN_ - 1;
+        sValueEliminator.SetTrue(iValue);
     }
     if (!sNE_.IsEmpty())
     {
-        sValueEliminator.SetTrue(2);
+        unsigned int iValue = sNE_ - 1;
+        sValueEliminator.SetTrue(iValue);
     }
     if (!sO_.IsEmpty())
     {
-        sValueEliminator.SetTrue(3);
+        unsigned int iValue = sO_ - 1;
+        sValueEliminator.SetTrue(iValue);
     }
     if (sC_.IsEmpty())
     {
-        sValueEliminator.SetTrue(4);
+        unsigned int iValue = sC_ - 1;
+        sValueEliminator.SetTrue(iValue);
     }
     if (!sE_.IsEmpty())
     {
-        sValueEliminator.SetTrue(5);
+        unsigned int iValue = sE_ - 1;
+        sValueEliminator.SetTrue(iValue);
     }
     if (!sSO_.IsEmpty())
     {
-        sValueEliminator.SetTrue(6);
+        unsigned int iValue = sSO_ - 1;
+        sValueEliminator.SetTrue(iValue);
     }
     if (!sS_.IsEmpty())
     {
-        sValueEliminator.SetTrue(7);
+        unsigned int iValue = sS_ - 1;
+        sValueEliminator.SetTrue(iValue);
     }
     if (!sSE_.IsEmpty())
     {
-        sValueEliminator.SetTrue(8);
+        unsigned int iValue = sSE_ - 1;
+        sValueEliminator.SetTrue(iValue);
     }
 }
