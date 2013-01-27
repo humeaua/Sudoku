@@ -172,3 +172,8 @@ bool RegionHolder::isValuePresent(unsigned int iValue) const
     flagValues(sValueEliminator);
     return sValueEliminator.flag(iValue);
 }
+
+bool RegionHolder::isFull() const
+{
+    return !(sNO_.IsEmpty() && sN_.IsEmpty() && sNE_.IsEmpty() && sO_.IsEmpty() && sC_.IsEmpty() && sE_.IsEmpty() && sSO_.IsEmpty() && sS_.IsEmpty() && sSE_.IsEmpty());
+}  
