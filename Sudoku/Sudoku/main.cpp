@@ -73,6 +73,10 @@ int main (int argc, const char * argv[])
         std::cout << "Error is : ";
         std::cout << s << std::endl;
     }
+    catch (const char * s)
+    {
+        std::cout << "Error is : " << s << std::endl;
+    }
     return 0;
 }
 
