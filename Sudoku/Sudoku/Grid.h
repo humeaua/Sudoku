@@ -35,6 +35,7 @@ public:
     virtual RegionHolder GetSO();
     
     virtual bool Accept(const IVisitor & sVisitor);
+    virtual bool IsPresentValueColumn(int iCol, int intValue);
 };
 
 #endif

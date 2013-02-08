@@ -80,3 +80,71 @@ bool Grid::Accept(const IVisitor &sVisitor)
 {
     return sVisitor.Visit(*this);
 }
+
+bool Grid::IsPresentValueColumn(int iCol, int intValue)
+{
+    bool res = false;
+    switch(iCol)
+    {
+        case 1:
+        {
+        if((*this).GetNO().LeftColumn().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetO().LeftColumn().isValuePresent(intValue)){res=true;}
+        else if((*this).GetSO().LeftColumn().isValuePresent(intValue)){res=true;}
+        break;}
+        
+        case 2:
+        {
+        if((*this).GetNO().MiddleColumn().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetO().MiddleColumn().isValuePresent(intValue)){res=true;}
+        else if((*this).GetSO().MiddleColumn().isValuePresent(intValue)){res=true;}
+        break;}
+        
+        case 3:
+        {
+        if((*this).GetNO().RightColumn().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetO().RightColumn().isValuePresent(intValue)){res=true;}
+        else if((*this).GetSO().RightColumn().isValuePresent(intValue)){res=true;}
+        break;}
+        
+        case 4:
+        {
+        if((*this).GetN().LeftColumn().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetC().LeftColumn().isValuePresent(intValue)){res=true;}
+        else if((*this).GetS().LeftColumn().isValuePresent(intValue)){res=true;}
+        break;}
+
+        case 5:
+        {
+        if((*this).GetN().MiddleColumn().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetC().MiddleColumn().isValuePresent(intValue)){res=true;}
+        else if((*this).GetS().MiddleColumn().isValuePresent(intValue)){res=true;}
+        break;}
+        
+        case 6:
+        {
+        if((*this).GetN().RightColumn().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetC().RightColumn().isValuePresent(intValue)){res=true;}
+        else if((*this).GetS().RightColumn().isValuePresent(intValue)){res=true;}
+        break;}
+        case 7:
+        {
+        if((*this).GetNE().LeftColumn().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetE().LeftColumn().isValuePresent(intValue)){res=true;}
+        else if((*this).GetSE().LeftColumn().isValuePresent(intValue)){res=true;}
+        break;}
+        case 8:
+        {
+        if((*this).GetNE().MiddleColumn().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetE().MiddleColumn().isValuePresent(intValue)){res=true;}
+        else if((*this).GetSE().MiddleColumn().isValuePresent(intValue)){res=true;}
+        break;}
+        case 9:
+        {
+        if((*this).GetNE().RightColumn().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetE().RightColumn().isValuePresent(intValue)){res=true;}
+        else if((*this).GetSE().RightColumn().isValuePresent(intValue)){res=true;}
+        break;}
+    }
+    return res;
+}
