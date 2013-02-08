@@ -52,3 +52,18 @@ bool TripleHolder::isValuePresent(unsigned int iValue) const
     flagValues(sValueEliminator);
     return sValueEliminator.flag(iValue);
 }
+
+std::vector<int> TripleHolder::indexEmpty()
+{
+    std::vector<int> index;
+    if(sLeft_.IsEmpty()){
+        index.push_back(1);
+    }
+    if(sCenter_.IsEmpty()){
+        index.push_back(2);
+    }
+    if(sRight_.IsEmpty()){
+        index.push_back(3);
+    }
+    return index;
+}

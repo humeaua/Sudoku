@@ -9,6 +9,7 @@
 #ifndef Sudoku_TripleHolder_h
 #define Sudoku_TripleHolder_h
 
+#include <vector>
 #include "Cell.h"
 #include "ValueEliminator.h"
 
@@ -26,6 +27,8 @@ public:
     
     virtual void flagValues(ValueEliminator & sValueEliminator) const;
     virtual bool isValuePresent(unsigned int iValue) const;
+    virtual std::vector<int> indexEmpty();
+
 };
 
 #endif
