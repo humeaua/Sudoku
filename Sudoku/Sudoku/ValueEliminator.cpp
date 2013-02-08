@@ -30,7 +30,7 @@ bool ValueEliminator::flag(unsigned int iValue) const
 
 unsigned int ValueEliminator::availableValues() const
 {
-    unsigned int iResult;
+    unsigned int iResult = 0;
     for (std::vector<bool>::const_iterator iter = bValues_.begin() ; iter != bValues_.end() ; ++iter)
     {
         if (*iter)
