@@ -11,6 +11,7 @@
 
 bool OnlySquareVisitor::Visit(Grid &ioGrid) const
 {
+    bool bResult = false;
     //  First line
     RowHolder   sRowHolder11 = ioGrid.GetNO().TopRow(),
                 sRowHolder12 = ioGrid.GetN().TopRow(),
@@ -37,6 +38,147 @@ bool OnlySquareVisitor::Visit(Grid &ioGrid) const
         
         std::set<unsigned int> iAvailableValues = sValueEliminator.availableValue();
         
+        bool bIs1stValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow11[0], *iAvailableValues.begin());
+        if (bIs1stValuePresent)
+        {
+            bResult = true;
+            switch (EmptyCellsRow11[0]) 
+            {
+                case 1:
+                    sRowHolder11.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 2:
+                    sRowHolder11.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 3:
+                    sRowHolder11.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 4:
+                    sRowHolder12.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 5:
+                    sRowHolder12.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 6:
+                    sRowHolder12.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 7:
+                    sRowHolder13.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 8:
+                    sRowHolder13.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 9:
+                    sRowHolder13.GetRight() = *iAvailableValues.begin();
+                    break;
+                default:
+                    break;
+            }
+            switch (EmptyCellsRow11[1]) 
+            {
+                case 1:
+                    sRowHolder11.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 2:
+                    sRowHolder11.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 3:
+                    sRowHolder11.GetRight() = *iAvailableValues.end();
+                    break;
+                case 4:
+                    sRowHolder12.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 5:
+                    sRowHolder12.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 6:
+                    sRowHolder12.GetRight() = *iAvailableValues.end();
+                    break;
+                case 7:
+                    sRowHolder13.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 8:
+                    sRowHolder13.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 9:
+                    sRowHolder13.GetRight() = *iAvailableValues.end();
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            bool bIs2ndValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow11[0], *iAvailableValues.end());
+            if (bIs2ndValuePresent)
+            {
+                bResult = true;
+                switch (EmptyCellsRow11[0]) 
+                {
+                    case 1:
+                        sRowHolder11.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 2:
+                        sRowHolder11.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 3:
+                        sRowHolder11.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 4:
+                        sRowHolder12.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 5:
+                        sRowHolder12.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 6:
+                        sRowHolder12.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 7:
+                        sRowHolder13.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 8:
+                        sRowHolder13.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 9:
+                        sRowHolder13.GetRight() = *iAvailableValues.end();
+                        break;
+                    default:
+                        break;
+                }
+                switch (EmptyCellsRow11[1]) 
+                {
+                    case 1:
+                        sRowHolder11.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 2:
+                        sRowHolder11.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 3:
+                        sRowHolder11.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 4:
+                        sRowHolder12.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 5:
+                        sRowHolder12.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 6:
+                        sRowHolder12.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 7:
+                        sRowHolder13.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 8:
+                        sRowHolder13.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 9:
+                        sRowHolder13.GetRight() = *iAvailableValues.begin();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
     }
    
     //  Second Line
@@ -64,7 +206,147 @@ bool OnlySquareVisitor::Visit(Grid &ioGrid) const
         sRowHolder23.flagValues(sValueEliminator);
         
         std::set<unsigned int> iAvailableValues = sValueEliminator.availableValue();
-        
+        bool bIs1stValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow21[0], *iAvailableValues.begin());
+        if (bIs1stValuePresent)
+        {
+            bResult = true;
+            switch (EmptyCellsRow21[0]) 
+            {
+                case 1:
+                    sRowHolder21.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 2:
+                    sRowHolder21.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 3:
+                    sRowHolder21.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 4:
+                    sRowHolder22.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 5:
+                    sRowHolder22.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 6:
+                    sRowHolder22.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 7:
+                    sRowHolder23.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 8:
+                    sRowHolder23.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 9:
+                    sRowHolder23.GetRight() = *iAvailableValues.begin();
+                    break;
+                default:
+                    break;
+            }
+            switch (EmptyCellsRow21[1]) 
+            {
+                case 1:
+                    sRowHolder21.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 2:
+                    sRowHolder21.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 3:
+                    sRowHolder21.GetRight() = *iAvailableValues.end();
+                    break;
+                case 4:
+                    sRowHolder22.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 5:
+                    sRowHolder22.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 6:
+                    sRowHolder22.GetRight() = *iAvailableValues.end();
+                    break;
+                case 7:
+                    sRowHolder23.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 8:
+                    sRowHolder23.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 9:
+                    sRowHolder23.GetRight() = *iAvailableValues.end();
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            bool bIs2ndValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow21[0], *iAvailableValues.end());
+            if (bIs2ndValuePresent)
+            {
+                bResult = true;
+                switch (EmptyCellsRow21[0]) 
+                {
+                    case 1:
+                        sRowHolder21.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 2:
+                        sRowHolder21.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 3:
+                        sRowHolder21.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 4:
+                        sRowHolder22.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 5:
+                        sRowHolder22.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 6:
+                        sRowHolder22.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 7:
+                        sRowHolder23.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 8:
+                        sRowHolder23.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 9:
+                        sRowHolder23.GetRight() = *iAvailableValues.end();
+                        break;
+                    default:
+                        break;
+                }
+                switch (EmptyCellsRow21[1]) 
+                {
+                    case 1:
+                        sRowHolder21.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 2:
+                        sRowHolder21.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 3:
+                        sRowHolder21.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 4:
+                        sRowHolder22.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 5:
+                        sRowHolder22.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 6:
+                        sRowHolder22.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 7:
+                        sRowHolder23.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 8:
+                        sRowHolder23.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 9:
+                        sRowHolder23.GetRight() = *iAvailableValues.begin();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
     }
     
     //  Third line
@@ -92,7 +374,147 @@ bool OnlySquareVisitor::Visit(Grid &ioGrid) const
         sRowHolder33.flagValues(sValueEliminator);
         
         std::set<unsigned int> iAvailableValues = sValueEliminator.availableValue();
-        
+        bool bIs1stValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow31[0], *iAvailableValues.begin());
+        if (bIs1stValuePresent)
+        {
+            bResult = true;
+            switch (EmptyCellsRow31[0]) 
+            {
+                case 1:
+                    sRowHolder31.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 2:
+                    sRowHolder31.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 3:
+                    sRowHolder31.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 4:
+                    sRowHolder32.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 5:
+                    sRowHolder32.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 6:
+                    sRowHolder32.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 7:
+                    sRowHolder33.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 8:
+                    sRowHolder33.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 9:
+                    sRowHolder33.GetRight() = *iAvailableValues.begin();
+                    break;
+                default:
+                    break;
+            }
+            switch (EmptyCellsRow31[1]) 
+            {
+                case 1:
+                    sRowHolder31.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 2:
+                    sRowHolder31.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 3:
+                    sRowHolder31.GetRight() = *iAvailableValues.end();
+                    break;
+                case 4:
+                    sRowHolder32.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 5:
+                    sRowHolder32.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 6:
+                    sRowHolder32.GetRight() = *iAvailableValues.end();
+                    break;
+                case 7:
+                    sRowHolder33.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 8:
+                    sRowHolder33.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 9:
+                    sRowHolder33.GetRight() = *iAvailableValues.end();
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            bool bIs2ndValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow31[0], *iAvailableValues.end());
+            if (bIs2ndValuePresent)
+            {
+                bResult = true;
+                switch (EmptyCellsRow31[0]) 
+                {
+                    case 1:
+                        sRowHolder31.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 2:
+                        sRowHolder31.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 3:
+                        sRowHolder31.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 4:
+                        sRowHolder32.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 5:
+                        sRowHolder32.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 6:
+                        sRowHolder32.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 7:
+                        sRowHolder33.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 8:
+                        sRowHolder33.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 9:
+                        sRowHolder33.GetRight() = *iAvailableValues.end();
+                        break;
+                    default:
+                        break;
+                }
+                switch (EmptyCellsRow31[1]) 
+                {
+                    case 1:
+                        sRowHolder31.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 2:
+                        sRowHolder31.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 3:
+                        sRowHolder31.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 4:
+                        sRowHolder32.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 5:
+                        sRowHolder32.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 6:
+                        sRowHolder32.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 7:
+                        sRowHolder33.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 8:
+                        sRowHolder33.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 9:
+                        sRowHolder33.GetRight() = *iAvailableValues.begin();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
     }
     
     //  Fourth line
@@ -120,7 +542,147 @@ bool OnlySquareVisitor::Visit(Grid &ioGrid) const
         sRowHolder43.flagValues(sValueEliminator);
         
         std::set<unsigned int> iAvailableValues = sValueEliminator.availableValue();
-        
+        bool bIs1stValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow41[0], *iAvailableValues.begin());
+        if (bIs1stValuePresent)
+        {
+            bResult = true;
+            switch (EmptyCellsRow41[0]) 
+            {
+                case 1:
+                    sRowHolder41.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 2:
+                    sRowHolder41.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 3:
+                    sRowHolder41.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 4:
+                    sRowHolder42.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 5:
+                    sRowHolder42.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 6:
+                    sRowHolder42.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 7:
+                    sRowHolder43.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 8:
+                    sRowHolder43.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 9:
+                    sRowHolder43.GetRight() = *iAvailableValues.begin();
+                    break;
+                default:
+                    break;
+            }
+            switch (EmptyCellsRow41[1]) 
+            {
+                case 1:
+                    sRowHolder41.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 2:
+                    sRowHolder41.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 3:
+                    sRowHolder41.GetRight() = *iAvailableValues.end();
+                    break;
+                case 4:
+                    sRowHolder42.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 5:
+                    sRowHolder42.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 6:
+                    sRowHolder42.GetRight() = *iAvailableValues.end();
+                    break;
+                case 7:
+                    sRowHolder43.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 8:
+                    sRowHolder43.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 9:
+                    sRowHolder43.GetRight() = *iAvailableValues.end();
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            bool bIs2ndValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow41[0], *iAvailableValues.end());
+            if (bIs2ndValuePresent)
+            {
+                bResult = true;
+                switch (EmptyCellsRow41[0]) 
+                {
+                    case 1:
+                        sRowHolder41.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 2:
+                        sRowHolder41.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 3:
+                        sRowHolder41.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 4:
+                        sRowHolder42.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 5:
+                        sRowHolder42.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 6:
+                        sRowHolder42.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 7:
+                        sRowHolder43.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 8:
+                        sRowHolder43.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 9:
+                        sRowHolder43.GetRight() = *iAvailableValues.end();
+                        break;
+                    default:
+                        break;
+                }
+                switch (EmptyCellsRow41[1]) 
+                {
+                    case 1:
+                        sRowHolder41.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 2:
+                        sRowHolder41.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 3:
+                        sRowHolder41.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 4:
+                        sRowHolder42.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 5:
+                        sRowHolder42.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 6:
+                        sRowHolder42.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 7:
+                        sRowHolder43.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 8:
+                        sRowHolder43.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 9:
+                        sRowHolder43.GetRight() = *iAvailableValues.begin();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
     }
     
     //  Fifth Line
@@ -148,7 +710,147 @@ bool OnlySquareVisitor::Visit(Grid &ioGrid) const
         sRowHolder53.flagValues(sValueEliminator);
         
         std::set<unsigned int> iAvailableValues = sValueEliminator.availableValue();
-        
+        bool bIs1stValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow51[0], *iAvailableValues.begin());
+        if (bIs1stValuePresent)
+        {
+            bResult = true;
+            switch (EmptyCellsRow51[0]) 
+            {
+                case 1:
+                    sRowHolder51.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 2:
+                    sRowHolder51.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 3:
+                    sRowHolder51.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 4:
+                    sRowHolder52.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 5:
+                    sRowHolder52.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 6:
+                    sRowHolder52.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 7:
+                    sRowHolder53.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 8:
+                    sRowHolder53.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 9:
+                    sRowHolder53.GetRight() = *iAvailableValues.begin();
+                    break;
+                default:
+                    break;
+            }
+            switch (EmptyCellsRow51[1]) 
+            {
+                case 1:
+                    sRowHolder51.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 2:
+                    sRowHolder51.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 3:
+                    sRowHolder51.GetRight() = *iAvailableValues.end();
+                    break;
+                case 4:
+                    sRowHolder52.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 5:
+                    sRowHolder52.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 6:
+                    sRowHolder52.GetRight() = *iAvailableValues.end();
+                    break;
+                case 7:
+                    sRowHolder53.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 8:
+                    sRowHolder53.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 9:
+                    sRowHolder53.GetRight() = *iAvailableValues.end();
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            bool bIs2ndValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow51[0], *iAvailableValues.end());
+            if (bIs2ndValuePresent)
+            {
+                bResult = true;
+                switch (EmptyCellsRow51[0]) 
+                {
+                    case 1:
+                        sRowHolder51.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 2:
+                        sRowHolder51.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 3:
+                        sRowHolder51.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 4:
+                        sRowHolder52.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 5:
+                        sRowHolder52.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 6:
+                        sRowHolder52.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 7:
+                        sRowHolder53.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 8:
+                        sRowHolder53.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 9:
+                        sRowHolder53.GetRight() = *iAvailableValues.end();
+                        break;
+                    default:
+                        break;
+                }
+                switch (EmptyCellsRow51[1]) 
+                {
+                    case 1:
+                        sRowHolder51.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 2:
+                        sRowHolder51.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 3:
+                        sRowHolder51.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 4:
+                        sRowHolder52.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 5:
+                        sRowHolder52.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 6:
+                        sRowHolder52.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 7:
+                        sRowHolder53.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 8:
+                        sRowHolder53.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 9:
+                        sRowHolder53.GetRight() = *iAvailableValues.begin();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
     }
     
     //  Sixth line
@@ -176,7 +878,147 @@ bool OnlySquareVisitor::Visit(Grid &ioGrid) const
         sRowHolder63.flagValues(sValueEliminator);
         
         std::set<unsigned int> iAvailableValues = sValueEliminator.availableValue();
-        
+        bool bIs1stValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow61[0], *iAvailableValues.begin());
+        if (bIs1stValuePresent)
+        {
+            bResult = true;
+            switch (EmptyCellsRow61[0]) 
+            {
+                case 1:
+                    sRowHolder61.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 2:
+                    sRowHolder61.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 3:
+                    sRowHolder61.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 4:
+                    sRowHolder62.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 5:
+                    sRowHolder62.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 6:
+                    sRowHolder62.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 7:
+                    sRowHolder63.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 8:
+                    sRowHolder63.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 9:
+                    sRowHolder63.GetRight() = *iAvailableValues.begin();
+                    break;
+                default:
+                    break;
+            }
+            switch (EmptyCellsRow61[1]) 
+            {
+                case 1:
+                    sRowHolder61.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 2:
+                    sRowHolder61.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 3:
+                    sRowHolder61.GetRight() = *iAvailableValues.end();
+                    break;
+                case 4:
+                    sRowHolder62.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 5:
+                    sRowHolder62.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 6:
+                    sRowHolder62.GetRight() = *iAvailableValues.end();
+                    break;
+                case 7:
+                    sRowHolder63.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 8:
+                    sRowHolder63.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 9:
+                    sRowHolder63.GetRight() = *iAvailableValues.end();
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            bool bIs2ndValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow61[0], *iAvailableValues.end());
+            if (bIs2ndValuePresent)
+            {
+                bResult = true;
+                switch (EmptyCellsRow61[0]) 
+                {
+                    case 1:
+                        sRowHolder61.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 2:
+                        sRowHolder61.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 3:
+                        sRowHolder61.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 4:
+                        sRowHolder62.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 5:
+                        sRowHolder62.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 6:
+                        sRowHolder62.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 7:
+                        sRowHolder63.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 8:
+                        sRowHolder63.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 9:
+                        sRowHolder63.GetRight() = *iAvailableValues.end();
+                        break;
+                    default:
+                        break;
+                }
+                switch (EmptyCellsRow61[1]) 
+                {
+                    case 1:
+                        sRowHolder61.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 2:
+                        sRowHolder61.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 3:
+                        sRowHolder61.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 4:
+                        sRowHolder62.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 5:
+                        sRowHolder62.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 6:
+                        sRowHolder62.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 7:
+                        sRowHolder63.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 8:
+                        sRowHolder63.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 9:
+                        sRowHolder63.GetRight() = *iAvailableValues.begin();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
     }
     
     //  Seventh line
@@ -204,7 +1046,147 @@ bool OnlySquareVisitor::Visit(Grid &ioGrid) const
         sRowHolder73.flagValues(sValueEliminator);
         
         std::set<unsigned int> iAvailableValues = sValueEliminator.availableValue();
-        
+        bool bIs1stValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow71[0], *iAvailableValues.begin());
+        if (bIs1stValuePresent)
+        {
+            bResult = true;
+            switch (EmptyCellsRow71[0]) 
+            {
+                case 1:
+                    sRowHolder71.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 2:
+                    sRowHolder71.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 3:
+                    sRowHolder71.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 4:
+                    sRowHolder72.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 5:
+                    sRowHolder72.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 6:
+                    sRowHolder72.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 7:
+                    sRowHolder73.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 8:
+                    sRowHolder73.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 9:
+                    sRowHolder73.GetRight() = *iAvailableValues.begin();
+                    break;
+                default:
+                    break;
+            }
+            switch (EmptyCellsRow71[1]) 
+            {
+                case 1:
+                    sRowHolder71.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 2:
+                    sRowHolder71.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 3:
+                    sRowHolder71.GetRight() = *iAvailableValues.end();
+                    break;
+                case 4:
+                    sRowHolder72.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 5:
+                    sRowHolder72.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 6:
+                    sRowHolder72.GetRight() = *iAvailableValues.end();
+                    break;
+                case 7:
+                    sRowHolder73.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 8:
+                    sRowHolder73.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 9:
+                    sRowHolder73.GetRight() = *iAvailableValues.end();
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            bool bIs2ndValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow71[0], *iAvailableValues.end());
+            if (bIs2ndValuePresent)
+            {
+                bResult = true;
+                switch (EmptyCellsRow71[0]) 
+                {
+                    case 1:
+                        sRowHolder71.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 2:
+                        sRowHolder71.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 3:
+                        sRowHolder71.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 4:
+                        sRowHolder72.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 5:
+                        sRowHolder72.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 6:
+                        sRowHolder72.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 7:
+                        sRowHolder73.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 8:
+                        sRowHolder73.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 9:
+                        sRowHolder73.GetRight() = *iAvailableValues.end();
+                        break;
+                    default:
+                        break;
+                }
+                switch (EmptyCellsRow71[1]) 
+                {
+                    case 1:
+                        sRowHolder71.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 2:
+                        sRowHolder71.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 3:
+                        sRowHolder71.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 4:
+                        sRowHolder72.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 5:
+                        sRowHolder72.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 6:
+                        sRowHolder72.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 7:
+                        sRowHolder73.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 8:
+                        sRowHolder73.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 9:
+                        sRowHolder73.GetRight() = *iAvailableValues.begin();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
     }
     
     //  Eighth Line
@@ -232,7 +1214,147 @@ bool OnlySquareVisitor::Visit(Grid &ioGrid) const
         sRowHolder83.flagValues(sValueEliminator);
         
         std::set<unsigned int> iAvailableValues = sValueEliminator.availableValue();
-        
+        bool bIs1stValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow81[0], *iAvailableValues.begin());
+        if (bIs1stValuePresent)
+        {
+            bResult = true;
+            switch (EmptyCellsRow81[0]) 
+            {
+                case 1:
+                    sRowHolder81.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 2:
+                    sRowHolder81.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 3:
+                    sRowHolder81.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 4:
+                    sRowHolder82.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 5:
+                    sRowHolder82.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 6:
+                    sRowHolder82.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 7:
+                    sRowHolder83.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 8:
+                    sRowHolder83.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 9:
+                    sRowHolder83.GetRight() = *iAvailableValues.begin();
+                    break;
+                default:
+                    break;
+            }
+            switch (EmptyCellsRow81[1]) 
+            {
+                case 1:
+                    sRowHolder81.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 2:
+                    sRowHolder81.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 3:
+                    sRowHolder81.GetRight() = *iAvailableValues.end();
+                    break;
+                case 4:
+                    sRowHolder82.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 5:
+                    sRowHolder82.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 6:
+                    sRowHolder82.GetRight() = *iAvailableValues.end();
+                    break;
+                case 7:
+                    sRowHolder83.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 8:
+                    sRowHolder83.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 9:
+                    sRowHolder83.GetRight() = *iAvailableValues.end();
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            bool bIs2ndValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow81[0], *iAvailableValues.end());
+            if (bIs2ndValuePresent)
+            {
+                bResult = true;
+                switch (EmptyCellsRow81[0]) 
+                {
+                    case 1:
+                        sRowHolder81.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 2:
+                        sRowHolder81.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 3:
+                        sRowHolder81.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 4:
+                        sRowHolder82.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 5:
+                        sRowHolder82.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 6:
+                        sRowHolder82.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 7:
+                        sRowHolder83.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 8:
+                        sRowHolder83.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 9:
+                        sRowHolder83.GetRight() = *iAvailableValues.end();
+                        break;
+                    default:
+                        break;
+                }
+                switch (EmptyCellsRow81[1]) 
+                {
+                    case 1:
+                        sRowHolder81.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 2:
+                        sRowHolder81.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 3:
+                        sRowHolder81.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 4:
+                        sRowHolder82.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 5:
+                        sRowHolder82.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 6:
+                        sRowHolder82.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 7:
+                        sRowHolder83.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 8:
+                        sRowHolder83.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 9:
+                        sRowHolder83.GetRight() = *iAvailableValues.begin();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
     }
     
     //  Nineth line
@@ -260,8 +1382,148 @@ bool OnlySquareVisitor::Visit(Grid &ioGrid) const
         sRowHolder93.flagValues(sValueEliminator);
         
         std::set<unsigned int> iAvailableValues = sValueEliminator.availableValue();
-        
+        bool bIs1stValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow91[0], *iAvailableValues.begin());
+        if (bIs1stValuePresent)
+        {
+            bResult = true;
+            switch (EmptyCellsRow91[0]) 
+            {
+                case 1:
+                    sRowHolder91.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 2:
+                    sRowHolder91.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 3:
+                    sRowHolder91.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 4:
+                    sRowHolder92.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 5:
+                    sRowHolder92.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 6:
+                    sRowHolder92.GetRight() = *iAvailableValues.begin();
+                    break;
+                case 7:
+                    sRowHolder93.GetLeft() = *iAvailableValues.begin();
+                    break;
+                case 8:
+                    sRowHolder93.GetCenter() = *iAvailableValues.begin();
+                    break;
+                case 9:
+                    sRowHolder93.GetRight() = *iAvailableValues.begin();
+                    break;
+                default:
+                    break;
+            }
+            switch (EmptyCellsRow91[1]) 
+            {
+                case 1:
+                    sRowHolder91.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 2:
+                    sRowHolder91.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 3:
+                    sRowHolder91.GetRight() = *iAvailableValues.end();
+                    break;
+                case 4:
+                    sRowHolder92.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 5:
+                    sRowHolder92.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 6:
+                    sRowHolder92.GetRight() = *iAvailableValues.end();
+                    break;
+                case 7:
+                    sRowHolder93.GetLeft() = *iAvailableValues.end();
+                    break;
+                case 8:
+                    sRowHolder93.GetCenter() = *iAvailableValues.end();
+                    break;
+                case 9:
+                    sRowHolder93.GetRight() = *iAvailableValues.end();
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            bool bIs2ndValuePresent = ioGrid.IsPresentValueColumn(EmptyCellsRow91[0], *iAvailableValues.end());
+            if (bIs2ndValuePresent)
+            {
+                bResult = true;
+                switch (EmptyCellsRow91[0]) 
+                {
+                    case 1:
+                        sRowHolder91.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 2:
+                        sRowHolder91.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 3:
+                        sRowHolder91.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 4:
+                        sRowHolder92.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 5:
+                        sRowHolder92.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 6:
+                        sRowHolder92.GetRight() = *iAvailableValues.end();
+                        break;
+                    case 7:
+                        sRowHolder93.GetLeft() = *iAvailableValues.end();
+                        break;
+                    case 8:
+                        sRowHolder93.GetCenter() = *iAvailableValues.end();
+                        break;
+                    case 9:
+                        sRowHolder93.GetRight() = *iAvailableValues.end();
+                        break;
+                    default:
+                        break;
+                }
+                switch (EmptyCellsRow91[1]) 
+                {
+                    case 1:
+                        sRowHolder91.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 2:
+                        sRowHolder91.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 3:
+                        sRowHolder91.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 4:
+                        sRowHolder92.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 5:
+                        sRowHolder92.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 6:
+                        sRowHolder92.GetRight() = *iAvailableValues.begin();
+                        break;
+                    case 7:
+                        sRowHolder93.GetLeft() = *iAvailableValues.begin();
+                        break;
+                    case 8:
+                        sRowHolder93.GetCenter() = *iAvailableValues.begin();
+                        break;
+                    case 9:
+                        sRowHolder93.GetRight() = *iAvailableValues.begin();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
     }
     
-    return false;
+    return bResult;
 }
