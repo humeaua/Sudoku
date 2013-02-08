@@ -46,7 +46,7 @@ std::set<unsigned int> ValueEliminator::availableValue() const
     std::set<unsigned int> sResult;
     for (unsigned int i = 0 ; i < (unsigned int)bValues_.size() ; ++i)
     {
-        if (bValues_[i])
+        if (!bValues_[i])
         {
             //  first value is 0
             sResult.insert(i + 1);
