@@ -148,3 +148,74 @@ bool Grid::IsPresentValueColumn(int iCol, int intValue)
     }
     return res;
 }
+
+bool Grid::IsPresentValueRow(int iRow, int intValue)
+{
+    bool res = false;
+    switch(iRow)
+    {
+        case 1:
+        {
+        if((*this).GetNO().TopRow().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetN().TopRow().isValuePresent(intValue)){res=true;}
+        else if((*this).GetNE().TopRow().isValuePresent(intValue)){res=true;}
+        break;}
+        
+        case 2:
+        {
+        if((*this).GetNO().MiddleRow().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetN().MiddleRow().isValuePresent(intValue)){res=true;}
+        else if((*this).GetNE().MiddleRow().isValuePresent(intValue)){res=true;}
+        break;}
+        
+        case 3:
+        {
+        if((*this).GetNO().BottomRow().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetN().BottomRow().isValuePresent(intValue)){res=true;}
+        else if((*this).GetNE().BottomRow().isValuePresent(intValue)){res=true;}
+        break;}
+        
+        case 4:
+        {
+        if((*this).GetO().TopRow().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetC().TopRow().isValuePresent(intValue)){res=true;}
+        else if((*this).GetE().TopRow().isValuePresent(intValue)){res=true;}
+        break;}
+        
+        case 5:
+        {
+        if((*this).GetO().MiddleRow().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetC().MiddleRow().isValuePresent(intValue)){res=true;}
+        else if((*this).GetE().MiddleRow().isValuePresent(intValue)){res=true;}
+        break;}
+        
+        case 6:
+        {
+        if((*this).GetO().BottomRow().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetC().BottomRow().isValuePresent(intValue)){res=true;}
+        else if((*this).GetE().BottomRow().isValuePresent(intValue)){res=true;}
+        break;}
+        
+        case 7:
+        {
+        if((*this).GetSO().TopRow().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetS().TopRow().isValuePresent(intValue)){res=true;}
+        else if((*this).GetSE().TopRow().isValuePresent(intValue)){res=true;}
+        break;}
+        
+        case 8:
+        {
+        if((*this).GetSO().MiddleRow().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetS().MiddleRow().isValuePresent(intValue)){res=true;}
+        else if((*this).GetSE().MiddleRow().isValuePresent(intValue)){res=true;}
+        break;}
+        
+        case 9:
+        {
+        if((*this).GetSO().BottomRow().isValuePresent(intValue)){res=true;}
+        else if ((*this).GetS().BottomRow().isValuePresent(intValue)){res=true;}
+        else if((*this).GetSE().BottomRow().isValuePresent(intValue)){res=true;}
+        break;}
+    }
+    return res;
+}
