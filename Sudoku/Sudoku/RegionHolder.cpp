@@ -139,7 +139,7 @@ void RegionHolder::flagValues(ValueEliminator &sValueEliminator) const
         unsigned int iValue = sO_ - 1;
         sValueEliminator.SetTrue(iValue);
     }
-    if (sC_.IsEmpty())
+    if (!sC_.IsEmpty())
     {
         unsigned int iValue = sC_ - 1;
         sValueEliminator.SetTrue(iValue);

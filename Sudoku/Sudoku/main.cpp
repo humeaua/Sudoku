@@ -15,6 +15,7 @@
 #include "OnlyOneChoiceInRowVisitor.h"
 #include "OnlyOneChoiceInColumnVisitor.h"
 #include "OnlyOneChoiceInRegionVisitor.h"
+#include "TwoOutOfThreeRowVisitor.h"
 
 int main (int argc, const char * argv[])
 {
@@ -27,6 +28,7 @@ int main (int argc, const char * argv[])
         std::cout << "2- Only One Choice In Row Visitor" << std::endl;
         std::cout << "3- Only One Choice In Column Visitor" << std::endl;
         std::cout << "4- Only One Choice In Region Visitor" << std::endl;
+        std::cout << "5- Two Out Of Three Row Visitor" << std::endl;
         std::size_t iTest = 1;
         std::cin >> iTest;
         
@@ -65,6 +67,14 @@ int main (int argc, const char * argv[])
             Grid sGrid(sRegion, sRegion, sRegion, sRegion, sRegion, sRegion, sRegion, sRegion, sRegion);
             OnlyOneChoiceInRegionVisitor sOnlyOneChoiceInRegionVisitor;
             std::cout << sOnlyOneChoiceInRegionVisitor.Visit(sGrid) << std::endl;
+        }
+        else if (iTest == 5)
+        {
+            Region sRegion1("--9634125"), sRegion2("51----639"), sRegion3("-6259-7-4"), sRegionEmpty("---------"), sRegion5("--7---32-"), sRegion8("173------");
+            Grid sGrid(sRegion1, sRegion2, sRegion3, sRegionEmpty, sRegion5, sRegionEmpty, sRegionEmpty, sRegion8, sRegionEmpty);
+            
+            TwoOutOfThreeRowVisitor sTwoOutOfThreeRowVisitor;
+            std::cout << sTwoOutOfThreeRowVisitor.Visit(sGrid) << std::endl;
         }
         std::cout << "Done!" << std::endl;
     } 
