@@ -70,7 +70,8 @@ int main (int argc, const char * argv[])
         }
         else if (iTest == 5)
         {
-            Region sRegion1("--9634125"), sRegion2("51----6-9"), sRegion3("36259-7-4"), sRegionEmpty("---------"), sRegion5("--7---32-"), sRegion8("173------");
+            //Region sRegion1("--9634125"), sRegion2("51----6-9"), sRegion3("36259-7-4"), sRegionEmpty("---------"), sRegion5("--7---32-"), sRegion8("173------");
+            Region sRegion1("--9634125"), sRegion2("51----639"), sRegion3("-6259-7-4"), sRegionEmpty("---------"), sRegion5("--7---32-"), sRegion8("173------");
             Grid sGrid(sRegion1, sRegion2, sRegion3, sRegionEmpty, sRegion5, sRegionEmpty, sRegionEmpty, sRegion8, sRegionEmpty);
             
             TwoOutOfThreeRowVisitor sTwoOutOfThreeRowVisitor;

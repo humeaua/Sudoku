@@ -143,6 +143,25 @@ bool TwoOutOfThreeRowVisitor::Visit(Grid & ioGrid) const
                         ioGrid.GetNE().MiddleRow().GetRight() = i;
                         bResult = true;
                     }
+                    //  Count the missing value in the row. if equal to 1, we can fill the missing value
+                    std::vector<int> iNMissingValues = ioGrid.GetNE().MiddleRow().indexEmpty();
+                    if (iNMissingValues.size() == 1)
+                    {
+                        switch (iNMissingValues[0]) {
+                            case 1:
+                                ioGrid.GetNE().MiddleRow().GetLeft() = i;
+                                break;
+                            case 2:
+                                ioGrid.GetNE().MiddleRow().GetCenter() = i;
+                                break;
+                            case 3:
+                                ioGrid.GetNE().MiddleRow().GetRight() = i;
+                                break;
+                            default:
+                                break;
+                        }
+                        bResult = true;
+                    }
                 }
             }
         else if(!ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
