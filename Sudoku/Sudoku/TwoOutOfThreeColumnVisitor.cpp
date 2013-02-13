@@ -10,5 +10,19 @@
 
 bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
 {
-    return false;
+    bool bResult = false;
+    
+    //  Region NO,O,SO
+    for (int i = 0 ; i < 10 ; ++i)
+    {}
+    
+    //  Region N,C,S
+    for (int i = 0 ; i < 10 ; ++i)
+    {}
+    
+    //  Region NE,E,SE
+    for (int i = 0 ; i < 10 ; ++i)
+    {}
+    
+    return bResult;
 }
