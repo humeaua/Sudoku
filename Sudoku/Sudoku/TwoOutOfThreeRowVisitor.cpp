@@ -24,13 +24,13 @@ bool TwoOutOfThreeRowVisitor::Visit(Grid & ioGrid) const
                     ioGrid.GetNO().BottomRow().GetLeft() = i;
                         bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir NO.bottom.2
                         ioGrid.GetNO().BottomRow().GetCenter() = i;
                         bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir NO.bottom.3
                         ioGrid.GetNO().BottomRow().GetRight() = i;
@@ -147,13 +147,13 @@ bool TwoOutOfThreeRowVisitor::Visit(Grid & ioGrid) const
                         ioGrid.GetNO().MiddleRow().GetLeft() = i;
                         bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir NO.middle.2
                         ioGrid.GetNO().MiddleRow().GetCenter() = i;
                         bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir NO.middle.3
                         ioGrid.GetNO().MiddleRow().GetRight() = i;
@@ -270,13 +270,13 @@ bool TwoOutOfThreeRowVisitor::Visit(Grid & ioGrid) const
                     ioGrid.GetNO().TopRow().GetLeft() = i;
                     bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir NO.top.2
                     ioGrid.GetNO().TopRow().GetCenter() = i;
                     bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir NO.top.3
                     ioGrid.GetNO().TopRow().GetRight() = i;
@@ -398,13 +398,13 @@ bool TwoOutOfThreeRowVisitor::Visit(Grid & ioGrid) const
                     ioGrid.GetO().BottomRow().GetLeft() = i;
                     bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir O.bottom.2
                     ioGrid.GetO().BottomRow().GetCenter() = i;
                     bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir O.bottom.3
                     ioGrid.GetO().BottomRow().GetRight() = i;
@@ -521,13 +521,13 @@ bool TwoOutOfThreeRowVisitor::Visit(Grid & ioGrid) const
                     ioGrid.GetO().MiddleRow().GetLeft() = i;
                     bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir O.middle.2
                     ioGrid.GetO().MiddleRow().GetCenter() = i;
                     bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir O.middle.3
                     ioGrid.GetO().MiddleRow().GetRight() = i;
@@ -644,13 +644,13 @@ bool TwoOutOfThreeRowVisitor::Visit(Grid & ioGrid) const
                     ioGrid.GetO().TopRow().GetLeft() = i;
                     bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir O.top.2
                     ioGrid.GetO().TopRow().GetCenter() = i;
                     bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir O.top.3
                     ioGrid.GetO().TopRow().GetRight() = i;
@@ -773,13 +773,13 @@ bool TwoOutOfThreeRowVisitor::Visit(Grid & ioGrid) const
                     ioGrid.GetSO().BottomRow().GetLeft() = i;
                     bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir SO.bottom.2
                     ioGrid.GetSO().BottomRow().GetCenter() = i;
                     bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir SO.bottom.3
                     ioGrid.GetSO().BottomRow().GetRight() = i;
@@ -896,13 +896,13 @@ bool TwoOutOfThreeRowVisitor::Visit(Grid & ioGrid) const
                     ioGrid.GetSO().MiddleRow().GetLeft() = i;
                     bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir SO.middle.2
                     ioGrid.GetSO().MiddleRow().GetCenter() = i;
                     bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir SO.middle.3
                     ioGrid.GetSO().MiddleRow().GetRight() = i;
@@ -1019,13 +1019,13 @@ bool TwoOutOfThreeRowVisitor::Visit(Grid & ioGrid) const
                     ioGrid.GetSO().TopRow().GetLeft() = i;
                     bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir SO.top.2
                     ioGrid.GetSO().TopRow().GetCenter() = i;
                     bResult = true;
                 }
-                else if(ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
+                else if(ioGrid.IsPresentValueColumn(1, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
                 {
                     // remplir SO.top.3
                     ioGrid.GetSO().TopRow().GetRight() = i;
