@@ -13,7 +13,7 @@ bool TwoOutOfThreeRowVisitor::Visit(Grid & ioGrid) const
     bool bResult = false;
     // Regions set (NO,N,NE)
     for(int i =1; i<10; i++)
-        {
+    {
         if(ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && !ioGrid.IsPresentValueRow(3, i))
         {
             if(!ioGrid.GetNO().isValuePresent(i))
