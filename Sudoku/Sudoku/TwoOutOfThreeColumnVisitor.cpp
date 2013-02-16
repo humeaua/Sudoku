@@ -14,15 +14,531 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
     
     //  Region NO,O,SO
     for (int i = 0 ; i < 10 ; ++i)
-    {}
+    {
+        if (ioGrid.IsPresentValueColumn(1, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
+        {
+            if (!ioGrid.GetNO().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NO.left.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && !ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NO.left.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && !ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NO.left.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetO().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir O.left.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && !ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir O.left.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && !ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir O.left.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetSO().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(7, i))
+                {
+                    //  remplir SO.left.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && !ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(7, i))
+                {
+                    //  remplir SO.left.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && !ioGrid.IsPresentValueRow(7, i))
+                {
+                    //  remplir SO.left.3
+                    bResult = true;
+                }
+            }
+        }
+        else if (ioGrid.IsPresentValueColumn(1, i) && !ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
+        {
+            if (!ioGrid.GetNO().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NO.center.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && !ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NO.center.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && !ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NO.center.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetO().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir O.center.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && !ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir O.center.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && !ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir O.center.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetSO().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir SO.center.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && !ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir SO.center.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && !ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir SO.center.3
+                    bResult = true;
+                }
+            }
+        }
+        else if (!ioGrid.IsPresentValueColumn(1, i) && ioGrid.IsPresentValueColumn(2, i) && ioGrid.IsPresentValueColumn(3, i))
+        {
+            if (!ioGrid.GetNO().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NO.right.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && !ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NO.right.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && !ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NO.right.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetO().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir O.right.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && !ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir O.right.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && !ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir O.right.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetSO().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir SO.right.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && !ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir SO.right.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && !ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir SO.right.3
+                    bResult = true;
+                }
+            }
+        }
+    }
     
     //  Region N,C,S
     for (int i = 0 ; i < 10 ; ++i)
-    {}
+    {
+        if (ioGrid.IsPresentValueColumn(4, i) && ioGrid.IsPresentValueColumn(5, i) && !ioGrid.IsPresentValueColumn(6, i))
+        {
+            if (!ioGrid.GetN().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir N.left.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && !ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir N.left.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && !ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir N.left.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetC().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir C.left.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && !ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir C.left.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && !ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir C.left.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetS().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir S.left.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && !ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir S.left.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && !ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir S.left.3
+                    bResult = true;
+                }
+            }
+        }
+        else if (ioGrid.IsPresentValueColumn(4, i) && !ioGrid.IsPresentValueColumn(5, i) && ioGrid.IsPresentValueColumn(6, i))
+        {
+            if (!ioGrid.GetN().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir N.center.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && !ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir N.center.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && !ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir N.center.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetC().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir C.center.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && !ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir C.center.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && !ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir C.center.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetS().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir S.center.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && !ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir S.center.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && !ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir S.center.3
+                    bResult = true;
+                }
+            }
+        }
+        else if (!ioGrid.IsPresentValueColumn(4, i) && ioGrid.IsPresentValueColumn(5, i) && ioGrid.IsPresentValueColumn(6, i))
+        {
+            if (!ioGrid.GetN().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir N.right.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && !ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir N.right.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && !ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir N.right.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetC().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir C.right.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && !ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir C.right.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && !ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir C.right.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetS().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir S.right.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && !ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir S.right.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && !ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir S.right.3
+                    bResult = true;
+                }
+            }
+        }
+    }
     
     //  Region NE,E,SE
     for (int i = 0 ; i < 10 ; ++i)
-    {}
+    {
+        if (ioGrid.IsPresentValueColumn(7, i) && ioGrid.IsPresentValueColumn(8, i) && !ioGrid.IsPresentValueColumn(9, i))
+        {
+            if (!ioGrid.GetNE().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NE.left.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && !ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NE.left.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && !ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NE.left.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetE().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir E.left.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && !ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir E.left.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && !ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir E.left.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetSE().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir SE.left.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && !ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir SE.left.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && !ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir SE.left.3
+                    bResult = true;
+                }
+            }
+        }
+        else if (ioGrid.IsPresentValueColumn(7, i) && !ioGrid.IsPresentValueColumn(8, i) && ioGrid.IsPresentValueColumn(9, i))
+        {
+            if (!ioGrid.GetNE().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NE.center.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && !ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NE.center.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && !ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NE.center.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetE().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir E.center.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && !ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir E.center.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && !ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir E.center.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetSE().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir SE.center.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && !ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir SE.center.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && !ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir SE.center.3
+                    bResult = true;
+                }
+            }
+        }
+        else if (!ioGrid.IsPresentValueColumn(7, i) && ioGrid.IsPresentValueColumn(8, i) && ioGrid.IsPresentValueColumn(9, i))
+        {
+            if (!ioGrid.GetNE().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NE.right.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && !ioGrid.IsPresentValueRow(2, i) && ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NE.right.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(1, i) && ioGrid.IsPresentValueRow(2, i) && !ioGrid.IsPresentValueRow(3, i))
+                {
+                    //  remplir NE.right.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetE().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir E.right.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && !ioGrid.IsPresentValueRow(5, i) && ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir E.right.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(4, i) && ioGrid.IsPresentValueRow(5, i) && !ioGrid.IsPresentValueRow(6, i))
+                {
+                    //  remplir E.right.3
+                    bResult = true;
+                }
+            }
+            if (!ioGrid.GetSE().isValuePresent(i))
+            {
+                if (!ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir SE.right.1
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && !ioGrid.IsPresentValueRow(8, i) && ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir SE.right.2
+                    bResult = true;
+                }
+                if (ioGrid.IsPresentValueRow(7, i) && ioGrid.IsPresentValueRow(8, i) && !ioGrid.IsPresentValueRow(9, i))
+                {
+                    //  remplir SE.right.3
+                    bResult = true;
+                }
+            }
+        }
+    }
     
     return bResult;
 }
