@@ -243,7 +243,7 @@ void Grid::Print()
     //  8th row
     std::cout << GetSO().GetO() << " " << GetSO().GetC() << " " << GetSO().GetE() << " " << GetS().GetO() << " " << GetS().GetC() << " " << GetS().GetE() << " " << GetSE().GetO() << " " << GetSE().GetC() << " " << GetSE().GetE() << std::endl;
     //  9th row
-    std::cout << GetNO().GetSO() << " " << GetNO().GetS() << " " << GetNO().GetSE() << " " << GetS().GetSO() << " " << GetS().GetS() << " " << GetS().GetSE() << " " << GetSE().GetSO() << " " << GetSE().GetS() << " " << GetSE().GetSE() << std::endl;
+    std::cout << GetSO().GetSO() << " " << GetSO().GetS() << " " << GetSO().GetSE() << " " << GetS().GetSO() << " " << GetS().GetS() << " " << GetS().GetSE() << " " << GetSE().GetSO() << " " << GetSE().GetS() << " " << GetSE().GetSE() << std::endl;
     
     std::cout << std::endl;
 }
