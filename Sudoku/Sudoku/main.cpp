@@ -17,6 +17,7 @@
 #include "OnlyOneChoiceInRegionVisitor.h"
 #include "TwoOutOfThreeRowVisitor.h"
 #include "TwoOutOfThreeColumnVisitor.h"
+#include "OnlySquareVisitor.h"
 
 int main (int argc, const char * argv[])
 {
@@ -31,6 +32,7 @@ int main (int argc, const char * argv[])
         std::cout << "4- Only One Choice In Region Visitor" << std::endl;
         std::cout << "5- Two Out Of Three Row Visitor" << std::endl;
         std::cout << "6- Two Out Of Three Column Visitor" << std::endl;
+        std::cout << "7- Force 4 Grid" << std::endl;
         std::size_t iTest = 1;
         std::cin >> iTest;
         
@@ -85,6 +87,41 @@ int main (int argc, const char * argv[])
             
             TwoOutOfThreeColumnVisitor sTwoOutOfThreeColumnVisitor;
             std::cout << sTwoOutOfThreeColumnVisitor.Visit(sGrid) << std::endl;
+        }
+        else if (iTest == 7)
+        {
+            Region  sRegion1("-----6--9"), sRegion2("--23----1"), sRegion3("6-3--1-52"), sRegion4("782----5-"), sRegion5("---------"), sRegion6("-9----726"), sRegion7("24-8--6-5"), sRegion8("1----48--"), sRegion9("8--5-----");
+            Grid sGrid(sRegion1, sRegion2, sRegion3, sRegion4, sRegion5, sRegion6, sRegion7, sRegion8, sRegion9);
+            sGrid.Print();
+            
+            OnlyOneChoiceInRowVisitor sOnlyOneChoiceInRowVisitor;
+            OnlyOneChoiceInColumnVisitor sOnlyOneChoiceInColumnVisitor;
+            OnlyOneChoiceInRegionVisitor sOnlyOneChoiceInRegionVisitor;
+            OnlySquareVisitor sOnlySquareVisitor;
+            TwoOutOfThreeRowVisitor sTwoOutOfThreeRowVisitor;
+            TwoOutOfThreeColumnVisitor sTwoOutOfThreeColumnVisitor;
+            
+            std::cout << "Entering loop" << std::endl;
+            std::size_t i = 0 ;
+            while (!sGrid.IsFull() && i <= 20) 
+            {
+                i++;
+                std::cout << "Loop " << i << " : " << std::endl;
+                sGrid.Print();
+                
+                sGrid.Accept(sOnlyOneChoiceInColumnVisitor);
+                
+                sGrid.Accept(sOnlyOneChoiceInRegionVisitor);
+                
+                sGrid.Accept(sOnlyOneChoiceInRowVisitor);
+                
+                sGrid.Accept(sOnlySquareVisitor);
+                
+                sGrid.Accept(sTwoOutOfThreeRowVisitor);
+                
+                sGrid.Accept(sTwoOutOfThreeColumnVisitor);
+                
+            }
         }
         std::cout << "Done!" << std::endl;
     } 
