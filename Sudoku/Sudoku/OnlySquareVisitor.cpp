@@ -2890,7 +2890,7 @@ bool OnlySquareVisitor::Visit(Grid &ioGrid) const
     {
         EmptyCellsCol91.push_back( EmptyCellsCol92[i] + 3);
     }
-    for (std::size_t i = 0 ; i < EmptyCellsCol83.size() ; ++i)
+    for (std::size_t i = 0 ; i < EmptyCellsCol93.size() ; ++i)
     {
         EmptyCellsCol91.push_back( EmptyCellsCol93[i] + 6);
     }
