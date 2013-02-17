@@ -13,7 +13,7 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
     bool bResult = false;
     
     //  Region NO,O,SO
-    for (int i = 0 ; i < 10 ; ++i)
+    for (int i = 1 ; i < 10 ; ++i)
     {
         if (ioGrid.IsPresentValueColumn(1, i) && ioGrid.IsPresentValueColumn(2, i) && !ioGrid.IsPresentValueColumn(3, i))
         {
@@ -38,18 +38,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetNO().LeftColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetNO().RightColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetNO().LeftColumn().T() = i;
+                            ioGrid.GetNO().RightColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetNO().LeftColumn().C() = i;
+                            ioGrid.GetNO().RightColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetNO().LeftColumn().B() = i;
+                            ioGrid.GetNO().RightColumn().B() = i;
                             break;
                         default:
                             break;
@@ -78,18 +78,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetO().LeftColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetO().RightColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetO().LeftColumn().T() = i;
+                            ioGrid.GetO().RightColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetO().LeftColumn().C() = i;
+                            ioGrid.GetO().RightColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetO().LeftColumn().B() = i;
+                            ioGrid.GetO().RightColumn().B() = i;
                             break;
                         default:
                             break;
@@ -118,18 +118,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetSO().LeftColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetSO().RightColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetSO().LeftColumn().T() = i;
+                            ioGrid.GetSO().RightColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetSO().LeftColumn().C() = i;
+                            ioGrid.GetSO().RightColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetSO().LeftColumn().B() = i;
+                            ioGrid.GetSO().RightColumn().B() = i;
                             break;
                         default:
                             break;
@@ -284,18 +284,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetNO().RightColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetNO().LeftColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetNO().RightColumn().T() = i;
+                            ioGrid.GetNO().LeftColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetNO().RightColumn().C() = i;
+                            ioGrid.GetNO().LeftColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetNO().RightColumn().B() = i;
+                            ioGrid.GetNO().LeftColumn().B() = i;
                             break;
                         default:
                             break;
@@ -324,18 +324,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetO().RightColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetO().LeftColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetO().RightColumn().T() = i;
+                            ioGrid.GetO().LeftColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetO().RightColumn().C() = i;
+                            ioGrid.GetO().LeftColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetO().RightColumn().B() = i;
+                            ioGrid.GetO().LeftColumn().B() = i;
                             break;
                         default:
                             break;
@@ -364,18 +364,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetSO().RightColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetSO().LeftColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetSO().RightColumn().T() = i;
+                            ioGrid.GetSO().LeftColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetSO().RightColumn().C() = i;
+                            ioGrid.GetSO().LeftColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetSO().RightColumn().B() = i;
+                            ioGrid.GetSO().LeftColumn().B() = i;
                             break;
                         default:
                             break;
@@ -387,7 +387,7 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
     }
     
     //  Region N,C,S
-    for (int i = 0 ; i < 10 ; ++i)
+    for (int i = 1 ; i < 10 ; ++i)
     {
         if (ioGrid.IsPresentValueColumn(4, i) && ioGrid.IsPresentValueColumn(5, i) && !ioGrid.IsPresentValueColumn(6, i))
         {
@@ -412,18 +412,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetN().LeftColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetN().RightColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetN().LeftColumn().T() = i;
+                            ioGrid.GetN().RightColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetN().LeftColumn().C() = i;
+                            ioGrid.GetN().RightColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetN().LeftColumn().B() = i;
+                            ioGrid.GetN().RightColumn().B() = i;
                             break;
                         default:
                             break;
@@ -452,18 +452,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetC().LeftColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetC().RightColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetC().LeftColumn().T() = i;
+                            ioGrid.GetC().RightColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetC().LeftColumn().C() = i;
+                            ioGrid.GetC().RightColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetC().LeftColumn().B() = i;
+                            ioGrid.GetC().RightColumn().B() = i;
                             break;
                         default:
                             break;
@@ -493,18 +493,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetN().LeftColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetN().RightColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetS().LeftColumn().T() = i;
+                            ioGrid.GetS().RightColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetS().LeftColumn().C() = i;
+                            ioGrid.GetS().RightColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetS().LeftColumn().B() = i;
+                            ioGrid.GetS().RightColumn().B() = i;
                             break;
                         default:
                             break;
@@ -659,18 +659,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetN().RightColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetN().LeftColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetN().RightColumn().T() = i;
+                            ioGrid.GetN().LeftColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetN().RightColumn().C() = i;
+                            ioGrid.GetN().LeftColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetN().RightColumn().B() = i;
+                            ioGrid.GetN().LeftColumn().B() = i;
                             break;
                         default:
                             break;
@@ -699,18 +699,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetC().RightColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetC().LeftColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetC().RightColumn().T() = i;
+                            ioGrid.GetC().LeftColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetC().RightColumn().C() = i;
+                            ioGrid.GetC().LeftColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetC().RightColumn().B() = i;
+                            ioGrid.GetC().LeftColumn().B() = i;
                             break;
                         default:
                             break;
@@ -739,18 +739,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetS().RightColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetS().LeftColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetS().RightColumn().T() = i;
+                            ioGrid.GetS().LeftColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetS().RightColumn().C() = i;
+                            ioGrid.GetS().LeftColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetS().RightColumn().B() = i;
+                            ioGrid.GetS().LeftColumn().B() = i;
                             break;
                         default:
                             break;
@@ -762,7 +762,7 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
     }
     
     //  Region NE,E,SE
-    for (int i = 0 ; i < 10 ; ++i)
+    for (int i = 1 ; i < 10 ; ++i)
     {
         if (ioGrid.IsPresentValueColumn(7, i) && ioGrid.IsPresentValueColumn(8, i) && !ioGrid.IsPresentValueColumn(9, i))
         {
@@ -787,18 +787,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetNE().LeftColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetNE().RightColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetNE().LeftColumn().T() = i;
+                            ioGrid.GetNE().RightColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetNE().LeftColumn().C() = i;
+                            ioGrid.GetNE().RightColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetNE().LeftColumn().B() = i;
+                            ioGrid.GetNE().RightColumn().B() = i;
                             break;
                         default:
                             break;
@@ -827,18 +827,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetE().LeftColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetE().RightColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetE().LeftColumn().T() = i;
+                            ioGrid.GetE().RightColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetE().LeftColumn().C() = i;
+                            ioGrid.GetE().RightColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetE().LeftColumn().B() = i;
+                            ioGrid.GetE().RightColumn().B() = i;
                             break;
                         default:
                             break;
@@ -867,18 +867,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetSE().LeftColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetSE().RightColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetSE().LeftColumn().T() = i;
+                            ioGrid.GetSE().RightColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetSE().LeftColumn().C() = i;
+                            ioGrid.GetSE().RightColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetSE().LeftColumn().B() = i;
+                            ioGrid.GetSE().RightColumn().B() = i;
                             break;
                         default:
                             break;
@@ -1033,18 +1033,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetNE().RightColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetNE().LeftColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetNE().RightColumn().T() = i;
+                            ioGrid.GetNE().LeftColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetNE().RightColumn().C() = i;
+                            ioGrid.GetNE().LeftColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetNE().RightColumn().B() = i;
+                            ioGrid.GetNE().LeftColumn().B() = i;
                             break;
                         default:
                             break;
@@ -1073,18 +1073,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetE().RightColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetE().LeftColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetE().RightColumn().T() = i;
+                            ioGrid.GetE().LeftColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetE().RightColumn().C() = i;
+                            ioGrid.GetE().LeftColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetE().RightColumn().B() = i;
+                            ioGrid.GetE().LeftColumn().B() = i;
                             break;
                         default:
                             break;
@@ -1113,18 +1113,18 @@ bool TwoOutOfThreeColumnVisitor::Visit(Grid & ioGrid) const
                     bResult = true;
                 }
                 //  Count the missing value in the row. if equal to 1, we can fill the missing value
-                std::vector<int> iNMissingValues = ioGrid.GetSE().RightColumn().indexEmpty();
+                std::vector<int> iNMissingValues = ioGrid.GetSE().LeftColumn().indexEmpty();
                 if (iNMissingValues.size() == 1)
                 {
                     switch (iNMissingValues[0]) {
                         case 1:
-                            ioGrid.GetSE().RightColumn().T() = i;
+                            ioGrid.GetSE().LeftColumn().T() = i;
                             break;
                         case 2:
-                            ioGrid.GetSE().RightColumn().C() = i;
+                            ioGrid.GetSE().LeftColumn().C() = i;
                             break;
                         case 3:
-                            ioGrid.GetSE().RightColumn().B() = i;
+                            ioGrid.GetSE().LeftColumn().B() = i;
                             break;
                         default:
                             break;
