@@ -37,6 +37,8 @@ public:
     virtual bool Accept(const IVisitor & sVisitor);
     virtual bool IsPresentValueColumn(int iCol, int intValue);
     virtual bool IsPresentValueRow(int iRow, int intValue);
+    
+    virtual void Print();
 };
 
 #endif
