@@ -23,6 +23,7 @@
 		4F5AA1E3169733CB00DC0F1C /* Region.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5AA1E2169733CB00DC0F1C /* Region.cpp */; };
 		4F7ECB7416A5907F0009A0EC /* OnlyOneChoiceInRowVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7ECB7316A5907F0009A0EC /* OnlyOneChoiceInRowVisitor.cpp */; };
 		4F84140B16B07B00008FE9C6 /* IVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F84140A16B07B00008FE9C6 /* IVisitor.cpp */; };
+		4FA97A5016D12163000AF491 /* NonupleHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FA97A4F16D12163000AF491 /* NonupleHolder.cpp */; };
 		E9342D3B16C55BD400610BC9 /* TwoOutOfThreeRowVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9342D3916C55BD300610BC9 /* TwoOutOfThreeRowVisitor.cpp */; };
 		E994CEFF16C71038004C671E /* TwoOutOfThreeColumnVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E994CEFD16C71038004C671E /* TwoOutOfThreeColumnVisitor.cpp */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,8 @@
 		4F7ECB7216A58F510009A0EC /* OnlyOneChoiceInRowVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlyOneChoiceInRowVisitor.h; sourceTree = "<group>"; };
 		4F7ECB7316A5907F0009A0EC /* OnlyOneChoiceInRowVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OnlyOneChoiceInRowVisitor.cpp; sourceTree = "<group>"; };
 		4F84140A16B07B00008FE9C6 /* IVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IVisitor.cpp; sourceTree = "<group>"; };
+		4FA97A4E16D11F98000AF491 /* NonupleHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NonupleHolder.h; sourceTree = "<group>"; };
+		4FA97A4F16D12163000AF491 /* NonupleHolder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NonupleHolder.cpp; sourceTree = "<group>"; };
 		E9342D3916C55BD300610BC9 /* TwoOutOfThreeRowVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TwoOutOfThreeRowVisitor.cpp; sourceTree = "<group>"; };
 		E9342D3A16C55BD300610BC9 /* TwoOutOfThreeRowVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoOutOfThreeRowVisitor.h; sourceTree = "<group>"; };
 		E994CEFD16C71038004C671E /* TwoOutOfThreeColumnVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TwoOutOfThreeColumnVisitor.cpp; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				4F7ECB7016A58C880009A0EC /* IVisitor.h */,
 				4F84140A16B07B00008FE9C6 /* IVisitor.cpp */,
 				4F5AA1D51696E82200DC0F1C /* main.cpp */,
+				4FA97A4E16D11F98000AF491 /* NonupleHolder.h */,
+				4FA97A4F16D12163000AF491 /* NonupleHolder.cpp */,
 				4F32455316AF25DC001BDA23 /* ValueEliminator.h */,
 				4F32455416AF263A001BDA23 /* ValueEliminator.cpp */,
 				4F024B5C16B59517009AB979 /* OnlySquareVisitor.h */,
@@ -213,6 +218,7 @@
 				4F024B5F16B5961B009AB979 /* OnlySquareVisitor.cpp in Sources */,
 				E9342D3B16C55BD400610BC9 /* TwoOutOfThreeRowVisitor.cpp in Sources */,
 				E994CEFF16C71038004C671E /* TwoOutOfThreeColumnVisitor.cpp in Sources */,
+				4FA97A5016D12163000AF491 /* NonupleHolder.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
