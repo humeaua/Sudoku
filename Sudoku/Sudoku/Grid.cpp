@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "Grid.h"
+#include "Column.h"
 
 Grid::Grid(const Region & sRegionNO, const Region & sRegionN, const Region & sRegionNE, const Region & sRegionO, const Region & sRegionC, const Region & sRegionE, const Region & sRegionSO, const Region & sRegionS, const Region & sRegionSE) :
 
@@ -247,3 +248,35 @@ void Grid::Print()
     
     std::cout << std::endl;
 }
+
+Column Grid::Col1()
+{
+    return Column(GetNO().LeftColumn(), GetO().LeftColumn(), GetSO().LeftColumn());
+}
+Column Grid::Col2(){}
+Column Grid::Col3(){}
+Column Grid::Col4(){}
+Column Grid::Col5(){}
+Column Grid::Col6(){}
+Column Grid::Col7(){}
+Column Grid::Col8(){}
+Column Grid::Col9(){}
+
+Row Grid::Row1()
+{}
+Row Grid::Row2()
+{}
+Row Grid::Row3()
+{}
+Row Grid::Row4()
+{}
+Row Grid::Row5()
+{}
+Row Grid::Row6()
+{}
+Row Grid::Row7()
+{}
+Row Grid::Row8()
+{}
+Row Grid::Row9()
+{}

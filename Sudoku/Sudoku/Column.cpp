@@ -7,8 +7,7 @@
 //
 
 #include "Column.h"
-#include "NonupleHolder.h"
-#include "ColumnHolder.h"
+
 
 Column::Column(ColumnHolder& c1, ColumnHolder & c2, ColumnHolder & c3) : s1_(c1.GetLeft()), s2_(c1.GetCenter()), s3_(c1.GetRight()),s4_(c2.GetLeft()), s5_(c2.GetCenter()), s6_(c2.GetRight()),s7_(c3.GetLeft()), s8_(c3.GetCenter()), s9_(c3.GetRight())
 {}

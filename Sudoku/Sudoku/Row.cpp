@@ -7,8 +7,6 @@
 //
 
 #include "Row.h"
-#include "NonupleHolder.h"
-#include "RowHolder.h"
 
 Row::Row(RowHolder& r1, RowHolder & r2, RowHolder & r3) : s1_(r1.GetLeft()), s2_(r1.GetCenter()), s3_(r1.GetRight()),s4_(r2.GetLeft()), s5_(r2.GetCenter()), s6_(r2.GetRight()),s7_(r3.GetLeft()), s8_(r3.GetCenter()), s9_(r3.GetRight())
 {}

@@ -12,6 +12,8 @@
 #include <vector>
 #include "RegionHolder.h"
 #include "IVisitor.h"
+#include "Column.h"
+#include "Row.h"
 
 class IVisitor;
 
@@ -33,6 +35,26 @@ public:
     virtual RegionHolder GetS();
     virtual RegionHolder GetSE();
     virtual RegionHolder GetSO();
+    
+    virtual Column Col1();
+    virtual Column Col2();
+    virtual Column Col3();
+    virtual Column Col4();
+    virtual Column Col5();
+    virtual Column Col6();
+    virtual Column Col7();
+    virtual Column Col8();
+    virtual Column Col9();
+    
+    virtual Row Row1();
+    virtual Row Row2();
+    virtual Row Row3();
+    virtual Row Row4();
+    virtual Row Row5();
+    virtual Row Row6();
+    virtual Row Row7();
+    virtual Row Row8();
+    virtual Row Row9();
     
     virtual bool Accept(const IVisitor & sVisitor);
     virtual bool IsPresentValueColumn(int iCol, int intValue);
