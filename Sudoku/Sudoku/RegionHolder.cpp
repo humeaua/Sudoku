@@ -176,4 +176,24 @@ bool RegionHolder::isValuePresent(unsigned int iValue) const
 bool RegionHolder::isFull() const
 {
     return !(sNO_.IsEmpty() && sN_.IsEmpty() && sNE_.IsEmpty() && sO_.IsEmpty() && sC_.IsEmpty() && sE_.IsEmpty() && sSO_.IsEmpty() && sS_.IsEmpty() && sSE_.IsEmpty());
-}  
+}
+
+bool RegionHolder::isConsistent()
+{
+    int result = true;
+    for(int i = 1; i<10; i++)
+        {
+        if( TopRow().isValuePresent(i) && MiddleRow().isValuePresent(i)) {result=false;}
+        else if (TopRow().isValuePresent(i) && BottomRow().isValuePresent(i)) {result=false;}
+        else if (MiddleRow().isValuePresent(i) && BottomRow().isValuePresent(i)) {result=false;}
+        }
+    
+    for(int i = 1; i<10; i++)
+        {
+        if( LeftColumn().isValuePresent(i) && MiddleColumn().isValuePresent(i)) {result=false;}
+        else if (LeftColumn().isValuePresent(i) && RightColumn().isValuePresent(i)) {result=false;}
+        else if (MiddleColumn().isValuePresent(i) && RightColumn().isValuePresent(i)) {result=false;}
+        }
+    
+    return result;
+}

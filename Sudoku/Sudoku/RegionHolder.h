@@ -55,6 +55,7 @@ public:
     virtual void flagValues(ValueEliminator & sValueEliminator) const;
     virtual bool isValuePresent(unsigned int iValue) const;
     virtual bool isFull() const;
+    virtual bool isConsistent();
 };
 
 #endif

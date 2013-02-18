@@ -19,6 +19,7 @@ public:
     virtual Cell & T();
     virtual Cell & C();
     virtual Cell & B();
+    virtual bool isConsistent();
 };
 
 #endif
