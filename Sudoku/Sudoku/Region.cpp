@@ -114,9 +114,6 @@ Region::Region(const std::string & cString)
     }
 }
 
-Region::~Region()
-{}
-
 bool Region::IsFull() const
 {
     return !sS_.IsEmpty() && !sSE_.IsEmpty() && !sSO_.IsEmpty() && !sE_.IsEmpty() && !sC_.IsEmpty() && !sE_.IsEmpty() && !sNE_.IsEmpty() && !sN_.IsEmpty() && sNO_.IsEmpty();
