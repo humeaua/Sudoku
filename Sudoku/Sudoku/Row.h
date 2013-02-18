@@ -19,6 +19,10 @@ public:
     Row(RowHolder & r1, RowHolder & r2, RowHolder & r3);
     Row(Cell &sCell1, Cell & sCell2, Cell & sCell3, Cell & sCell4, Cell & sCell5, Cell & sCell6, Cell & sCell7, Cell & sCell8, Cell & sCell9);
     
+    virtual RowHolder LeftRowHolder();
+    virtual RowHolder MiddleRowHolder();
+    virtual RowHolder RightRowHolder();
+    
     virtual bool isConsistent();
 };
 
