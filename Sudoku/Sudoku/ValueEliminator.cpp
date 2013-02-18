@@ -11,12 +11,10 @@
 
 ValueEliminator::ValueEliminator()
 {
-    bValues_.assign(9, false);
-}
-
-ValueEliminator::~ValueEliminator()
-{
-    bValues_.clear();
+    for (int i = 0 ; i < 9 ; ++i)
+    {
+        bValues_[i] = false;
+    }
 }
 
 bool ValueEliminator::flag(unsigned int iValue) const
@@ -31,9 +29,9 @@ bool ValueEliminator::flag(unsigned int iValue) const
 unsigned int ValueEliminator::availableValues() const
 {
     unsigned int iResult = 0;
-    for (std::vector<bool>::const_iterator iter = bValues_.begin() ; iter != bValues_.end() ; ++iter)
+    for (int i = 0 ; i < 9 ; ++i)
     {
-        if (*iter)
+        if (bValues_[i])
         {
             iResult++;
         }
@@ -44,7 +42,7 @@ unsigned int ValueEliminator::availableValues() const
 std::set<unsigned int> ValueEliminator::availableValue() const
 {
     std::set<unsigned int> sResult;
-    for (unsigned int i = 0 ; i < (unsigned int)bValues_.size() ; ++i)
+    for (unsigned int i = 0 ; i < 9 ; ++i)
     {
         if (!bValues_[i])
         {

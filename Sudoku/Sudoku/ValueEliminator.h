@@ -14,11 +14,10 @@
 
 class ValueEliminator {
 protected:
-    std::vector<bool> bValues_;
+    bool bValues_[9];
     
 public:
     ValueEliminator();
-    virtual ~ValueEliminator();
     
     virtual bool flag(unsigned int iValue) const;
     virtual unsigned int availableValues() const;
