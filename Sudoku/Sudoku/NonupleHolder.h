@@ -14,6 +14,7 @@
 class NonupleHolder {
     Cell &s1_, &s2_, &s3_, &s4_, &s5_, &s6_, &s7_, &s8_, &s9_;
 public:
+    NonupleHolder();
     NonupleHolder(TripleHolder & s1, TripleHolder & s2, TripleHolder & s3);
     NonupleHolder(Cell &sCell1, Cell & sCell2, Cell & sCell3, Cell & sCell4, Cell & sCell5, Cell & sCell6, Cell & sCell7, Cell & sCell8, Cell & sCell9);
     
