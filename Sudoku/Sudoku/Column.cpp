@@ -21,7 +21,7 @@ ColumnHolder Column::TopColHolder()
 
 ColumnHolder Column::MiddleColHolder()
 {
-    return ColumnHolder(s4_, s4_, s6_);
+    return ColumnHolder(s4_, s5_, s6_);
 }
 
 ColumnHolder Column::BottomColHolder()

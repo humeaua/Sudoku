@@ -21,7 +21,7 @@ RowHolder Row::LeftRowHolder()
 
 RowHolder Row::MiddleRowHolder()
 {
-    return RowHolder(s4_, s4_, s6_);
+    return RowHolder(s4_, s5_, s6_);
 }
 
 RowHolder Row::RightRowHolder()
