@@ -40,4 +40,4 @@ bool Column::isConsistent()
         else if (MiddleColHolder().isValuePresent(i) && BottomColHolder().isValuePresent(i)) {result=false;}
         }
     return result;
-}
+} 

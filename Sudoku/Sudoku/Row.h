@@ -14,7 +14,7 @@
 #include "RowHolder.h"
 
 class Row : public NonupleHolder {
-    Cell &s1_, &s2_, &s3_, &s4_, &s5_, &s6_, &s7_, &s8_, &s9_;
+
 public:
     Row(RowHolder & r1, RowHolder & r2, RowHolder & r3);
     Row(Cell &sCell1, Cell & sCell2, Cell & sCell3, Cell & sCell4, Cell & sCell5, Cell & sCell6, Cell & sCell7, Cell & sCell8, Cell & sCell9);

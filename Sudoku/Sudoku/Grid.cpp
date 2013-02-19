@@ -253,6 +253,7 @@ Column Grid::Col1()
 {
     return Column(GetNO().LeftColumn(), GetO().LeftColumn(), GetSO().LeftColumn());
 }
+
 Column Grid::Col2(){}
 Column Grid::Col3(){}
 Column Grid::Col4(){}
