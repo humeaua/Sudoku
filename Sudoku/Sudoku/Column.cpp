@@ -31,7 +31,7 @@ ColumnHolder Column::BottomColHolder()
 
 bool Column::isConsistent()
 {
-    int result = true;
+    bool result = true;
     for(int i = 1; i<10; i++)
         {
         if( TopColHolder().isValuePresent(i) && MiddleColHolder().isValuePresent(i)) {result=false;}

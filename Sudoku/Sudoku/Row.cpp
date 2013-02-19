@@ -31,7 +31,7 @@ RowHolder Row::RightRowHolder()
 
 bool Row::isConsistent()
 {
-    int result = true;
+    bool result = true;
     for(int i = 1; i<10; i++)
         {
         if( LeftRowHolder().isValuePresent(i) && MiddleRowHolder().isValuePresent(i)) {result=false;}

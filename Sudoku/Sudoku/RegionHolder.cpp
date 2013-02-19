@@ -180,7 +180,7 @@ bool RegionHolder::isFull() const
 
 bool RegionHolder::isConsistent()
 {
-    int result = true;
+    bool result = true;
     for(int i = 1; i<10; i++)
         {
         if( TopRow().isValuePresent(i) && MiddleRow().isValuePresent(i)) {result=false;}
