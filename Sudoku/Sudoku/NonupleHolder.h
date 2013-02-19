@@ -12,6 +12,7 @@
 #include "TripleHolder.h"
 
 class NonupleHolder {
+protected:
     Cell &s1_, &s2_, &s3_, &s4_, &s5_, &s6_, &s7_, &s8_, &s9_;
 public:
     NonupleHolder();

@@ -251,7 +251,9 @@ void Grid::Print()
 
 Column Grid::Col1()
 {
-    return Column(GetNO().LeftColumn(), GetO().LeftColumn(), GetSO().LeftColumn());
+    //return Column(GetNO().LeftColumn(), GetO().LeftColumn(), GetSO().LeftColumn());
+    //return Column(GetNO().LeftColumn(), GetO().LeftColumn(), GetSO().LeftColumn());
+    
 }
 
 Column Grid::Col2(){}
