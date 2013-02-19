@@ -103,23 +103,25 @@ int main (int argc, const char * argv[])
             
             std::cout << "Entering loop" << std::endl;
             std::size_t i = 0 ;
-            while (!sGrid.IsFull() && i <= 20) 
+            bool bResult = true;
+            while (bResult) 
             {
+                bResult = false;
                 i++;
                 std::cout << "Loop " << i << " : " << std::endl;
                 sGrid.Print();
                 
-                sGrid.Accept(sOnlyOneChoiceInColumnVisitor);
+                bResult = sGrid.Accept(sOnlyOneChoiceInColumnVisitor) || bResult;
                 
-                sGrid.Accept(sOnlyOneChoiceInRegionVisitor);
+                bResult = sGrid.Accept(sOnlyOneChoiceInRegionVisitor) || bResult;
                 
-                sGrid.Accept(sOnlyOneChoiceInRowVisitor);
+                bResult = sGrid.Accept(sOnlyOneChoiceInRowVisitor) || bResult;
                 
-                sGrid.Accept(sOnlySquareVisitor);
+                bResult = sGrid.Accept(sOnlySquareVisitor) || bResult;
                 
-                sGrid.Accept(sTwoOutOfThreeRowVisitor);
+                bResult = sGrid.Accept(sTwoOutOfThreeRowVisitor) || bResult;
                 
-                sGrid.Accept(sTwoOutOfThreeColumnVisitor);
+                bResult = sGrid.Accept(sTwoOutOfThreeColumnVisitor) || bResult;
                 
             }
         }
