@@ -251,35 +251,95 @@ void Grid::Print()
 
 Column Grid::Col1()
 {
-    //return Column(GetNO().LeftColumn(), GetO().LeftColumn(), GetSO().LeftColumn());
-    //return Column(GetNO().LeftColumn(), GetO().LeftColumn(), GetSO().LeftColumn());
-    
+    ColumnHolder sH = GetNO().LeftColumn(), sC = GetO().LeftColumn(), sB = GetSO().LeftColumn();
+    return Column(sH, sC, sB);
 }
 
-Column Grid::Col2(){}
-Column Grid::Col3(){}
-Column Grid::Col4(){}
-Column Grid::Col5(){}
-Column Grid::Col6(){}
-Column Grid::Col7(){}
-Column Grid::Col8(){}
-Column Grid::Col9(){}
+Column Grid::Col2()
+{
+    ColumnHolder sH = GetNO().MiddleColumn(), sC = GetO().MiddleColumn(), sB = GetSO().MiddleColumn();
+    return Column(sH, sC, sB);
+}
+Column Grid::Col3()
+{
+    ColumnHolder sH = GetNO().RightColumn(), sC = GetO().RightColumn(), sB = GetSO().RightColumn();
+    return Column(sH, sC, sB);
+}
+Column Grid::Col4()
+{
+    ColumnHolder sH = GetN().LeftColumn(), sC = GetC().LeftColumn(), sB = GetS().LeftColumn();
+    return Column(sH, sC, sB);
+}
+Column Grid::Col5()
+{
+    ColumnHolder sH = GetN().MiddleColumn(), sC = GetC().MiddleColumn(), sB = GetS().MiddleColumn();
+    return Column(sH, sC, sB);
+}
+Column Grid::Col6()
+{
+    ColumnHolder sH = GetN().RightColumn(), sC = GetC().RightColumn(), sB = GetS().RightColumn();
+    return Column(sH, sC, sB);
+}
+Column Grid::Col7()
+{
+    ColumnHolder sH = GetNE().LeftColumn(), sC = GetE().LeftColumn(), sB = GetSE().LeftColumn();
+    return Column(sH, sC, sB);
+}
+Column Grid::Col8()
+{
+    ColumnHolder sH = GetNE().MiddleColumn(), sC = GetE().MiddleColumn(), sB = GetSE().MiddleColumn();
+    return Column(sH, sC, sB);
+}
+Column Grid::Col9()
+{
+    ColumnHolder sH = GetNE().RightColumn(), sC = GetE().RightColumn(), sB = GetSE().RightColumn();
+    return Column(sH, sC, sB);
+}
 
 Row Grid::Row1()
-{}
+{
+    RowHolder rH = GetNO().TopRow(), rC = GetN().TopRow(), rB = GetNE().TopRow();
+    return Row(rH, rC, rB);
+}
 Row Grid::Row2()
-{}
+{
+    RowHolder rH = GetNO().MiddleRow(), rC = GetN().MiddleRow(), rB = GetNE().MiddleRow();
+    return Row(rH, rC, rB);
+}
 Row Grid::Row3()
-{}
+{
+    RowHolder rH = GetNO().BottomRow(), rC = GetN().BottomRow(), rB = GetNE().BottomRow();
+    return Row(rH, rC, rB);
+}
 Row Grid::Row4()
-{}
+{
+    RowHolder rH = GetO().TopRow(), rC = GetC().TopRow(), rB = GetE().TopRow();
+    return Row(rH, rC, rB);
+}
 Row Grid::Row5()
-{}
+{
+    RowHolder rH = GetO().MiddleRow(), rC = GetC().MiddleRow(), rB = GetE().MiddleRow();
+    return Row(rH, rC, rB);
+}
 Row Grid::Row6()
-{}
+{
+    RowHolder rH = GetO().BottomRow(), rC = GetC().BottomRow(), rB = GetE().BottomRow();
+    return Row(rH, rC, rB);
+}
 Row Grid::Row7()
-{}
+{
+    RowHolder rH = GetSO().TopRow(), rC = GetS().TopRow(), rB = GetSE().TopRow();
+    return Row(rH, rC, rB);
+}
 Row Grid::Row8()
-{}
+{
+    RowHolder rH = GetSO().MiddleRow(), rC = GetS().MiddleRow(), rB = GetSE().MiddleRow();
+    return Row(rH, rC, rB);
+}
 Row Grid::Row9()
-{}
+{
+    RowHolder rH = GetSO().BottomRow(), rC = GetS().BottomRow(), rB = GetSE().BottomRow();
+    return Row(rH, rC, rB);
+}
+
+
