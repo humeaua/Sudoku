@@ -343,3 +343,38 @@ Row Grid::Row9()
 }
 
 
+bool Grid::isConsistent()
+{
+    bool result = true;
+    if(Col1().isConsistent()){result=false;}
+    if(Col2().isConsistent()){result=false;}
+    if(Col3().isConsistent()){result=false;}
+    if(Col4().isConsistent()){result=false;}
+    if(Col5().isConsistent()){result=false;}
+    if(Col6().isConsistent()){result=false;}
+    if(Col7().isConsistent()){result=false;}
+    if(Col8().isConsistent()){result=false;}
+    if(Col9().isConsistent()){result=false;}
+
+    if(Row1().isConsistent()){result=false;}
+    if(Row2().isConsistent()){result=false;}
+    if(Row3().isConsistent()){result=false;}
+    if(Row4().isConsistent()){result=false;}
+    if(Row5().isConsistent()){result=false;}
+    if(Row6().isConsistent()){result=false;}
+    if(Row7().isConsistent()){result=false;}
+    if(Row8().isConsistent()){result=false;}
+    if(Row9().isConsistent()){result=false;}
+    
+    if(GetNO().isConsistent()){result=false;}
+    if(GetN().isConsistent()){result=false;}
+    if(GetNE().isConsistent()){result=false;}
+    if(GetO().isConsistent()){result=false;}
+    if(GetC().isConsistent()){result=false;}
+    if(GetE().isConsistent()){result=false;}
+    if(GetSO().isConsistent()){result=false;}
+    if(GetS().isConsistent()){result=false;}
+    if(GetSE().isConsistent()){result=false;}
+    
+    return result;
+}

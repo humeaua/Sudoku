@@ -61,6 +61,8 @@ public:
     virtual bool IsPresentValueRow(int iRow, int intValue);
     
     virtual void Print();
+    
+    virtual bool isConsistent();
 };
 
 #endif
